@@ -1,3 +1,19 @@
+#' Title
+#'
+#' @param Theta
+#' @param coef
+#' @param nbs
+#' @param n.comp
+#' @param orthogonalize_fpcs
+#' @param N.Unp.Basis
+#'
+#'
+#' @keywords internal
+#' @return
+#'
+#'
+#'
+#' @examples
 get_fpcs <- function(Theta,
                      coef, nbs, n.comp,
                      orthogonalize_fpcs,

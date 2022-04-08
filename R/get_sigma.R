@@ -1,3 +1,19 @@
+#' Title
+#'
+#' @param data
+#' @param coef
+#' @param Theta
+#' @param c_mat
+#' @param N.Unp.Basis
+#' @param nbs
+#'
+#'
+#' @keywords internal
+#' @return
+#'
+#'
+#'
+#' @examples
 get_sigma <- function(data, coef, Theta, c_mat, N.Unp.Basis, nbs) {
 
 

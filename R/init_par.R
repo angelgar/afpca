@@ -1,3 +1,18 @@
+#' Title
+#'
+#' @param data
+#' @param n.comp
+#' @param Theta
+#' @param orthogonalize_fpcs
+#' @param N.Unp.Basis
+#'
+#'
+#' @keywords internal
+#' @return
+#'
+#'
+#'
+#' @examples
 init_par <- function(data, n.comp,
                      Theta,
                      orthogonalize_fpcs,

@@ -1,3 +1,18 @@
+#' Title
+#'
+#' @param yi
+#' @param Mu
+#' @param Phi
+#' @param sigma
+#' @param n.comp
+#'
+#'
+#' @keywords internal
+#' @return
+#'
+#'
+#'
+#' @examples
 get_score <- function(yi, Mu, Phi, sigma, n.comp) {
 
 

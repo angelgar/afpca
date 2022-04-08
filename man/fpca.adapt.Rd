@@ -6,21 +6,40 @@
 \usage{
 fpca.adapt(
   data,
+  basis = "trunc.poly",
   poly.degree = 2,
   knots = NA,
   nbs = 35,
   n.comp = 18,
+  pve = 0.99,
   normalize.scores = TRUE,
   orthogonalize_scores = TRUE,
-  seed.num = 4,
   orthogonalize_fpcs = TRUE,
-  ntimes = 100,
-  basis = "trunc.poly",
-  pve = 0.99
+  ntimes = 100
 )
 }
 \arguments{
-\item{pve}{}
+\item{data}{A data frame, or matrix of functional observations.}
+
+\item{basis}{Type of spline basis}
+
+\item{poly.degree}{The degree of the the spline basis}
+
+\item{knots}{Number of knots used to generate a spline basis to estimate the mean function and functional principal components}
+
+\item{nbs}{Number of spline basis to generate mean function and functional principal components}
+
+\item{n.comp}{prespecified number of principal components}
+
+\item{pve}{proportion of variance explained; used to choose the number of functional principal components}
+
+\item{normalize.scores}{normalize scores at each iteration (default is true, recommended)}
+
+\item{orthogonalize_scores}{orthogonalize scores at each iteration (default is true, recommended)}
+
+\item{orthogonalize_fpcs}{orthogonalize FPCs at each iteration (default is true, recommended)}
+
+\item{ntimes}{Maximum number of iterations}
 }
 \value{
 

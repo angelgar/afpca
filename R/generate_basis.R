@@ -1,3 +1,15 @@
+#' Title
+#'
+#' @param data
+#' @param poly.degree
+#' @param knots
+#' @param nbs
+#' @param basis
+#'
+#' @keywords internal
+#' @return
+#'
+#' @examples
 generate_basis <- function(data, poly.degree = 2, knots = NA,
                               nbs = 40,
                               basis = "trunc.poly") {

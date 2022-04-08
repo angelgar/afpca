@@ -1,17 +1,16 @@
 #' Adpative Functional Principal Component Analysis
 #'
-#' @param data
-#' @param poly.degree
-#' @param knots
-#' @param nbs
-#' @param n.comp
-#' @param normalize.scores
-#' @param orthogonalize_scores
-#' @param seed.num
-#' @param orthogonalize_fpcs
-#' @param ntimes
-#' @param basis
-#' @param pve
+#' @param data A data frame, or matrix of functional observations.
+#' @param basis Type of spline basis
+#' @param poly.degree The degree of the the spline basis
+#' @param knots Number of knots used to generate a spline basis to estimate the mean function and functional principal components
+#' @param nbs Number of spline basis to generate mean function and functional principal components
+#' @param n.comp prespecified number of principal components
+#' @param pve proportion of variance explained; used to choose the number of functional principal components
+#' @param normalize.scores normalize scores at each iteration (default is true, recommended)
+#' @param orthogonalize_scores orthogonalize scores at each iteration (default is true, recommended)
+#' @param orthogonalize_fpcs orthogonalize FPCs at each iteration (default is true, recommended)
+#' @param ntimes Maximum number of iterations
 #'
 #' @return
 #' @export
@@ -19,18 +18,14 @@
 #' @examples
 #'
 #'
-fpca.adapt <- function(data, poly.degree = 2,
-                           knots = NA,
-                           nbs = 35,
-                           n.comp = 18,
-                           normalize.scores = TRUE,
-                           orthogonalize_scores = TRUE,
-                           seed.num = 4,
+fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
+                           knots = NA, nbs = 35,
+                           n.comp = 18, pve = 0.99,
+                           normalize.scores = TRUE, orthogonalize_scores = TRUE,
                            orthogonalize_fpcs = TRUE,
-                           ntimes = 100,
-                           basis = "trunc.poly", pve = 0.99) {
+                           ntimes = 100) {
 
-  set.seed(seed.num)
+  set.seed(1)
 
   ## Generate Spline Basis
   Basis <- generate_basis(data, poly.degree, knots,
