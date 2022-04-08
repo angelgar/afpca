@@ -1,18 +1,20 @@
-#' Estimate the Full Likelihood of the FPCA Model (Internal)
+#' Title
 #'
-#' @param data Input Data i.e. Y
-#' @param coef Estimated Spline Coefficients
-#' @param Theta Matrix of Penalized Spline Basis
-#' @param c_mat Matrix of Scores
-#' @param N.Unp.Basis Matrix of Unpenalized Spline Basis
-#' @param nbs Number of penalized spline basis
-#' @param n.comp Number of FPC's that are being estimated
-#' @param lambda Adaptive Smoothness Penalty Matrix
-#' @param sigma Residual Variance
+#' @param data
+#' @param coef
+#' @param Theta
+#' @param c_mat
+#' @param N.Unp.Basis
+#' @param nbs
+#' @param n.comp
+#' @param lambda
+#' @param sigma
 #'
+#' @keywords internal
 #' @return
 #'
-
+#'
+#' @examples
 get_likelihood <- function(data, coef, Theta, c_mat,
                            N.Unp.Basis, nbs, n.comp, lambda, sigma) {
 

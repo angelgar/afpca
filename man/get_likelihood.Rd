@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_likelihood.R
 \name{get_likelihood}
 \alias{get_likelihood}
-\title{Estimate the Full Likelihood of the FPCA Model (Internal)}
+\title{Title}
 \usage{
 get_likelihood(
   data,
@@ -17,27 +17,12 @@ get_likelihood(
 )
 }
 \arguments{
-\item{data}{Input Data i.e. Y}
-
-\item{coef}{Estimated Spline Coefficients}
-
-\item{Theta}{Matrix of Penalized Spline Basis}
-
-\item{c_mat}{Matrix of Scores}
-
-\item{N.Unp.Basis}{Matrix of Unpenalized Spline Basis}
-
-\item{nbs}{Number of penalized spline basis}
-
-\item{n.comp}{Number of FPC's that are being estimated}
-
-\item{lambda}{Adaptive Smoothness Penalty Matrix}
-
-\item{sigma}{Residual Variance}
+\item{sigma}{}
 }
 \value{
 
 }
 \description{
-Estimate the Full Likelihood of the FPCA Model (Internal)
+Title
 }
+\keyword{internal}
