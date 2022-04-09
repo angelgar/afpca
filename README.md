@@ -4,6 +4,7 @@
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/afpca)](https://CRAN.R-project.org/package=afpca)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![R-CMD-check](https://github.com/angelgar/afpca/workflows/R-CMD-check/badge.svg)](https://github.com/angelgar/afpca/actions)
 <!-- badges: end -->
 
 The goal of afpca is to ...
