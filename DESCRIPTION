@@ -1,5 +1,5 @@
 Package: afpca
-Title: What the Package Does (One Line, Title Case)
+Title: TEST 
 Version: 0.0.0.9000
 Authors@R: 
     c(person("Angel", "Garcia de la Garza", , "ag3914@columbia.edu", role = c("aut", "cre"),
