@@ -1,4 +1,7 @@
-#' Adpative Functional Principal Component Analysis
+#' @title Adaptive Functional Principal Component Analysis
+#'
+#' @description
+#' Decomposes functional observations using adaptive functional principal component analysis. This method incorporates adaptive smoothness into the estimated decomposition by using a penalized likelihood framework
 #'
 #' @param data A data frame, or matrix of functional observations.
 #' @param basis Type of spline basis
@@ -12,7 +15,13 @@
 #' @param orthogonalize_fpcs orthogonalize FPCs at each iteration (default is true, recommended)
 #' @param ntimes Maximum number of iterations
 #'
-#' @return
+#' @references
+#'
+#' Paper
+#'
+#' @
+#'
+#' @return The function returns a BLA
 #' @export
 #'
 #' @examples
@@ -154,7 +163,6 @@ fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
 
   for (i in 1:dim(data)[2]) {
 
-    # reconstructed_data[,i] <- est_fpc$Mu + est_fpc$Phi[,] %*% c_mat[i,]
     reconstructed_data[,i] <- est_fpc$Mu + est_fpc$Phi[,1:fpc_no_keep] %*% c_mat[i,]
 
   }

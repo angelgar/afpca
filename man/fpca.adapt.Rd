@@ -2,7 +2,7 @@
 % Please edit documentation in R/fpca.adapt.R
 \name{fpca.adapt}
 \alias{fpca.adapt}
-\title{Adpative Functional Principal Component Analysis}
+\title{Adaptive Functional Principal Component Analysis}
 \usage{
 fpca.adapt(
   data,
@@ -42,12 +42,15 @@ fpca.adapt(
 \item{ntimes}{Maximum number of iterations}
 }
 \value{
-
+The function returns a BLA
 }
 \description{
-Adpative Functional Principal Component Analysis
+Decomposes functional observations using adaptive functional principal component analysis. This method incorporates adaptive smoothness into the estimated decomposition by using a penalized likelihood framework
 }
 \examples{
 
 
+}
+\references{
+Paper
 }
