@@ -2,7 +2,7 @@ pandoc: 2.14.0.3
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-04-09T22:16Z
+last_built: 2022-04-09T22:47Z
 urls:
   reference: https://www.angelgarciadelagarza.com/afpca/reference
   article: https://www.angelgarciadelagarza.com/afpca/articles

@@ -12,7 +12,14 @@ status](https://www.r-pkg.org/badges/version/afpca)](https://CRAN.R-project.org/
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of afpca is to …
+Adaptive Functional Principal Component Analysis
+
+-   Authors: [Angel Garcia de la
+    Garza](http://angelgarciadelagarza.com), [Jeff
+    Goldsmith](https://jeffgoldsmith.com/)
+-   License: [MIT](https://opensource.org/licenses/MIT). See the
+    [LICENSE](LICENSE) file for details
+-   Version: 0.9
 
 ## Installation
 
