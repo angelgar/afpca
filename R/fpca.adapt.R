@@ -19,7 +19,6 @@
 #'
 #' Paper
 #'
-#' @
 #'
 #' @return The function returns a BLA
 #' @export

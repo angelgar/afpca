@@ -10,11 +10,14 @@
 #' @param noise.var residual noise variance
 #' @param seed.num seed number
 #'
+#' @importFrom magrittr %>%
+#' @importFrom MASS mvrnorm
+#'
+#'
 #' @return
 #' @export
 #'
 #' @examples
-
 #' sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
 simulate_adaptive_functional_data <- function(n.tp = 200,
                                               N.subj = 20,
