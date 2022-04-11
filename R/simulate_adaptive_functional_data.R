@@ -1,5 +1,9 @@
 #' Simulate Adaptive Functional Data
 #'
+#'
+#' @description
+#' Simulated functional data that includes with sharp changes over the domain of the function (i.e. smoothness rapidly changes over the domain). The data simulates data using sinusoidal functions with varying period and amplitude.
+#'
 #' @param n.tp number of timepoints
 #' @param N.subj number of subjects
 #' @param var.scores variance of the scores (this is the value of the eigenvalues)
@@ -9,7 +13,14 @@
 #' @importFrom magrittr %>%
 #'
 #'
-#' @return
+#' @return An object of class "fpca_sim_data" that contains the following:
+#'
+#' \item{data}{simulated dataset}
+#' \item{data_true}{simulated dataset without any noise}
+#' \item{Mu_true}{The true data-generating mean-function}
+#' \item{Phi_true}{The true data-generating functional principal components}
+#' \item{Scores_true}{The true scores}
+#'
 #' @export
 #'
 #' @examples

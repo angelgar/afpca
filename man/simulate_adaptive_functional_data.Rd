@@ -24,10 +24,16 @@ simulate_adaptive_functional_data(
 \item{seed.num}{seed number}
 }
 \value{
+An object of class "fpca_sim_data" that contains the following:
 
+\item{data}{simulated dataset}
+\item{data_true}{simulated dataset without any noise}
+\item{Mu_true}{The true data-generating mean-function}
+\item{Phi_true}{The true data-generating functional principal components}
+\item{Scores_true}{The true scores}
 }
 \description{
-Simulate Adaptive Functional Data
+Simulated functional data that includes with sharp changes over the domain of the function (i.e. smoothness rapidly changes over the domain). The data simulates data using sinusoidal functions with varying period and amplitude.
 }
 \examples{
 sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
