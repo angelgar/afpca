@@ -61,7 +61,7 @@ simulated_data <- simulate_adaptive_functional_data(noise.var = 0.05)
 
 The plot below show what this simulated data looks like:
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-simulated_data_plot-1.png" style="display: block; margin: auto;" />
 
 ## Citation
 
