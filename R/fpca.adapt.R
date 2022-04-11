@@ -23,7 +23,21 @@
 #' Paper
 #'
 #'
-#' @return The function returns a BLA
+#' @return The function returns an object of class "afpca" that contains the following:
+#'
+#' \item{Y}{The observed data.}
+#' \item{Y_hat}{The reconstructed fitted values}
+#' \item{mean}{a vector of the estimated mean function}
+#' \item{fpcs}{a tp (number of timepoints) by npc (number of fpcs) matrix of the estimated eigenfunctions}
+#' \item{scores}{an n (number of subjects) by npc (number of fpcs) matrix of estimated scores}
+#' \item{eigenvalues}{estimated eigenvalues i.e. variances of fpc scores}
+#' \item{Basis}{list containing penalized (Theta_beta) and penalized (Theta_b) spline basis}
+#' \item{Theta}{concatenation of (Theta_beta) and penalized (Theta_b) spline basis}
+#' \item{coef}{estimated coefficients, coef %*% theta = fpcs}
+#' \item{convergence}{logical, algorithm converged or not}
+#' \item{no.iter}{number of iterations needed for convergence}
+#'
+#'
 #' @export
 #'
 #' @examples
@@ -177,7 +191,6 @@ fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
                  Theta = Theta,
                  Basis = Basis,
                  coef = coef,
-                 coef_old = coef_old,
                  convergence = convergence,
                  no.iter = no.iter)
 

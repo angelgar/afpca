@@ -93,8 +93,30 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>The function returns a BLA</p>
-    </div>
+    <p>The function returns an object of class "afpca" that contains the following:</p>
+<dl><dt>Y</dt>
+<dd><p>The observed data.</p></dd>
+<dt>Y_hat</dt>
+<dd><p>The reconstructed fitted values</p></dd>
+<dt>mean</dt>
+<dd><p>a vector of the estimated mean function</p></dd>
+<dt>fpcs</dt>
+<dd><p>a tp (number of timepoints) by npc (number of fpcs) matrix of the estimated eigenfunctions</p></dd>
+<dt>scores</dt>
+<dd><p>an n (number of subjects) by npc (number of fpcs) matrix of estimated scores</p></dd>
+<dt>eigenvalues</dt>
+<dd><p>estimated eigenvalues i.e. variances of fpc scores</p></dd>
+<dt>Basis</dt>
+<dd><p>list containing penalized (Theta_beta) and penalized (Theta_b) spline basis</p></dd>
+<dt>Theta</dt>
+<dd><p>concatenation of (Theta_beta) and penalized (Theta_b) spline basis</p></dd>
+<dt>coef</dt>
+<dd><p>estimated coefficients, coef %*% theta = fpcs</p></dd>
+<dt>convergence</dt>
+<dd><p>logical, algorithm converged or not</p></dd>
+<dt>no.iter</dt>
+<dd><p>number of iterations needed for convergence</p></dd>
+</dl></div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Paper</p>

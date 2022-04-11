@@ -42,7 +42,19 @@ fpca.adapt(
 \item{ntimes}{Maximum number of iterations}
 }
 \value{
-The function returns a BLA
+The function returns an object of class "afpca" that contains the following:
+
+\item{Y}{The observed data.}
+\item{Y_hat}{The reconstructed fitted values}
+\item{mean}{a vector of the estimated mean function}
+\item{fpcs}{a tp (number of timepoints) by npc (number of fpcs) matrix of the estimated eigenfunctions}
+\item{scores}{an n (number of subjects) by npc (number of fpcs) matrix of estimated scores}
+\item{eigenvalues}{estimated eigenvalues i.e. variances of fpc scores}
+\item{Basis}{list containing penalized (Theta_beta) and penalized (Theta_b) spline basis}
+\item{Theta}{concatenation of (Theta_beta) and penalized (Theta_b) spline basis}
+\item{coef}{estimated coefficients, coef \%*\% theta = fpcs}
+\item{convergence}{logical, algorithm converged or not}
+\item{no.iter}{number of iterations needed for convergence}
 }
 \description{
 Decomposes functional observations using adaptive functional principal component analysis. This method incorporates adaptive smoothness into the estimated decomposition by using a penalized likelihood framework
