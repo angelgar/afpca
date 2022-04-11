@@ -31,7 +31,6 @@
 #' sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
 #' afpca_output <- fpca.adapt(data = sim_data, nbs = 5)
 #'
-#'
 fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
                            knots = NA, nbs = 35,
                            n.comp = 18, pve = 0.99,
@@ -141,14 +140,9 @@ fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
     #}
 
     no.iter <- no.iter + 1
-    print(loglik)
-    print(loglik_old)
+
     (loglik - loglik_old)/ abs(loglik_old)
 
-
-    print(no.iter)
-    print(sigma_old)
-    print(sigma)
     convergence <- FALSE
     if (((loglik - loglik_old)/ abs(loglik_old)) < 0.0001 & times > 4) {
       convergence <- TRUE

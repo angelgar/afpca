@@ -22,7 +22,8 @@ Imports:
     Matrix,
     refund,
     stats,
-    tibble
+    tibble,
+    vctrs
 Config/testthat/edition: 3
 Suggests: 
     spelling,
