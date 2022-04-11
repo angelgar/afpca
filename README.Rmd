@@ -153,11 +153,7 @@ example1_plot + example2_plot + plot_layout(guides = 'collect')  &
 
 ```
 
-
-
-
 ## Citation
 
-## References
 
 

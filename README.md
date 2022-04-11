@@ -82,5 +82,3 @@ respective reconstructions.
 <img src="man/figures/README-reconstructed_plots-1.png" style="display: block; margin: auto;" />
 
 ## Citation
-
-## References
