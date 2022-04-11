@@ -4,9 +4,9 @@
 \name{afpca-package}
 \alias{afpca}
 \alias{afpca-package}
-\title{afpca: What the Package Does (One Line, Title Case)}
+\title{afpca: Adaptive Functional Principal Component Analysis}
 \description{
-What the package does (one paragraph).
+A method for integrating adaptive smoothness into functional principal component analysis
 }
 \seealso{
 Useful links:
@@ -17,7 +17,12 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Angel Garcia de la Garza \email{ag3914@columbia.edu} (\href{https://orcid.org/0000-0001-6062-5190}{ORCID})
+
+Authors:
+\itemize{
+  \item Jeff Goldsmith \email{jeff.goldsmith@columbia.edu}
+}
 
 }
 \keyword{internal}
