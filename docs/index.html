@@ -87,6 +87,20 @@
 <div class="section level2">
 <h2 id="how-to-use-it">How to use it<a class="anchor" aria-label="anchor" href="#how-to-use-it"></a>
 </h2>
+<p>These are examples of running adaptive FPCA. More details of the use of the package can be found in XYZ.</p>
+<p>The code below uses a the function <code><a href="reference/simulate_adaptive_functional_data.html">afpca::simulate_adaptive_functional_data()</a></code> to simulate 20 curves <em>Y</em><sub><em>i</em></sub>(<em>t</em>), <em>i</em> = 1, …, 20 observed over 200 time points on a common grid over domain (0,1) with gaussian noise. These functions are generated from a mean function and two functional principal components with varying temporal smoothness defined as:</p>
+<ul>
+<li>
+<em>μ</em>(<em>t</em>) = <em>t</em><sup>−3/2</sup> sin (<em>π</em>×<em>t</em><sup>1/4</sup>)<em>I</em>(<em>t</em>&gt;1/2)</li>
+<li>
+<em>ϕ</em><sub><em>k</em></sub>(<em>t</em>) = <em>t</em><sup>−3/2</sup> sin (4<em>π</em>×<em>k</em>×<em>t</em><sup>1/4</sup>)<em>I</em>(<em>t</em>&gt;1/2), <em>k</em> = 1, 2</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/angelgar/afpca" class="external-link">afpca</a></span><span class="op">)</span>
+
+<span class="va">simulated_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/simulate_adaptive_functional_data.html">simulate_adaptive_functional_data</a></span><span class="op">(</span>noise.var <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></code></pre></div>
+<p>The plot below show what this simulated data looks like:</p>
+<p><img src="reference/figures/README-unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>

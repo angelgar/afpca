@@ -24,6 +24,8 @@ Adaptive Functional Principal Component Analysis
 
 ## What is does
 
+TEXT TEXT
+
 ## Installation
 
 You can install the development version of afpca from
@@ -36,7 +38,30 @@ devtools::install_github("angelgar/afpca")
 
 ## How to use it
 
-This example runs FPCA
+These are examples of running adaptive FPCA. More details of the use of
+the package can be found in XYZ.
+
+The code below uses a the function
+`afpca::simulate_adaptive_functional_data()` to simulate 20 curves
+*Y*<sub>*i*</sub>(*t*), *i* = 1, …, 20 observed over 200 time points on
+a common grid over domain (0,1) with gaussian noise. These functions are
+generated from a mean function and two functional principal components
+with varying temporal smoothness defined as:
+
+-   *μ*(*t*) = *t*<sup>−3/2</sup>
+    sin (*π*×*t*<sup>1/4</sup>)*I*(*t*\>1/2)
+-   *ϕ*<sub>*k*</sub>(*t*) = *t*<sup>−3/2</sup>
+    sin (4*π*×*k*×*t*<sup>1/4</sup>)*I*(*t*\>1/2), *k* = 1, 2
+
+``` r
+library(afpca)
+
+simulated_data <- simulate_adaptive_functional_data(noise.var = 0.05)
+```
+
+The plot below show what this simulated data looks like:
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" />
 
 ## Citation
 
