@@ -28,7 +28,7 @@
 simulate_adaptive_functional_data <- function(n.tp = 200,
                                               N.subj = 20,
                                               var.scores = c(4,1),
-                                              noise.var = 0.2,
+                                              noise.var = 0.05,
                                               seed.num = 1) {
 
 

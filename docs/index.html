@@ -75,6 +75,7 @@
 <div class="section level2">
 <h2 id="what-is-does">What is does<a class="anchor" aria-label="anchor" href="#what-is-does"></a>
 </h2>
+<p>TEXT TEXT</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -98,9 +99,16 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/angelgar/afpca" class="external-link">afpca</a></span><span class="op">)</span>
 
-<span class="va">simulated_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/simulate_adaptive_functional_data.html">simulate_adaptive_functional_data</a></span><span class="op">(</span>noise.var <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></code></pre></div>
+<span class="va">simulated_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/simulate_adaptive_functional_data.html">simulate_adaptive_functional_data</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>The plot below show what this simulated data looks like:</p>
-<p><img src="reference/figures/README-unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/README-simulated_data_plot-1.png" style="display: block; margin: auto;"></p>
+<p>Our software performs adaptively-smoothed functional principal component analysis. The main function in our package to do this is <code>afpca:fpca.adapt</code>. The code below illustrates how to do this:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">afpca.output</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/fpca.adapt.html">fpca.adapt</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">simulated_data</span><span class="op">)</span></code></pre></div>
+<p>The plots below show the estimated mean function and functional principal components</p>
+<p><img src="reference/figures/README-estimated_fpc_plot-1.png" style="display: block; margin: auto;"></p>
+<p>The plots below shows two examples of observed functions and the respective reconstructions.</p>
+<p><img src="reference/figures/README-reconstructed_plots-1.png" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>

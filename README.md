@@ -56,12 +56,30 @@ with varying temporal smoothness defined as:
 ``` r
 library(afpca)
 
-simulated_data <- simulate_adaptive_functional_data(noise.var = 0.05)
+simulated_data <- simulate_adaptive_functional_data()
 ```
 
 The plot below show what this simulated data looks like:
 
 <img src="man/figures/README-simulated_data_plot-1.png" style="display: block; margin: auto;" />
+
+Our software performs adaptively-smoothed functional principal component
+analysis. The main function in our package to do this is
+`afpca:fpca.adapt`. The code below illustrates how to do this:
+
+``` r
+afpca.output <- fpca.adapt(data = simulated_data)
+```
+
+The plots below show the estimated mean function and functional
+principal components
+
+<img src="man/figures/README-estimated_fpc_plot-1.png" style="display: block; margin: auto;" />
+
+The plots below shows two examples of observed functions and the
+respective reconstructions.
+
+<img src="man/figures/README-reconstructed_plots-1.png" style="display: block; margin: auto;" />
 
 ## Citation
 

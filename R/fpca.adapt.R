@@ -3,7 +3,7 @@
 #' @description
 #' Decomposes functional observations using adaptive functional principal component analysis. This method incorporates adaptive smoothness into the estimated decomposition by using a penalized likelihood framework
 #'
-#' @param data A data frame, or matrix of functional observations.
+#' @param data A data frame, matrix, or a tidyfun "tfd.reg" object of functional observations.
 #' @param basis Type of spline basis
 #' @param poly.degree The degree of the the spline basis
 #' @param knots Number of knots used to generate a spline basis to estimate the mean function and functional principal components

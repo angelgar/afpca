@@ -19,7 +19,7 @@ fpca.adapt(
 )
 }
 \arguments{
-\item{data}{A data frame, or matrix of functional observations.}
+\item{data}{A data frame, matrix, or a tidyfun "tfd.reg" object of functional observations.}
 
 \item{basis}{Type of spline basis}
 

@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -53,7 +55,7 @@ The code below uses a the function `afpca::simulate_adaptive_functional_data()` 
 
 library(afpca)
 
-simulated_data <- simulate_adaptive_functional_data(noise.var = 0.05)
+simulated_data <- simulate_adaptive_functional_data()
 
 ```
 
@@ -70,11 +72,86 @@ simulated_data$data %>%
   ggplot(aes(x = time, y = value)) +
     geom_line(aes(group = name), alpha = 0.4) + 
     theme_bw() + xlab("Domain") + ylab("Value")
-  
+
+```
+
+Our software performs adaptively-smoothed functional principal component analysis. The main function in our package to do this is `afpca:fpca.adapt`. The code below illustrates how to do this:
+
+```{r}
+
+afpca.output <- fpca.adapt(data = simulated_data)
+
+```
+
+The plots below show the estimated mean function and functional principal components 
+
+```{r estimated_fpc_plot, echo = FALSE, fig.align='center', fig.height=3, fig.width=9, dpi = 300}
+
+mean_plot <- afpca.output$mean %>%
+                as_tibble() %>%
+                mutate(time = 1:200) %>%
+                ggplot(aes(x = time, y = V1)) +
+                  geom_line() + 
+                  theme_bw() + 
+                  labs(y = expression(paste(hat(mu),"(t)")),
+                       x = "domain")
+
+
+phi_plot <- afpca.output$fpcs %>%
+                as_tibble() %>%
+                mutate(time = 1:200) %>%
+                pivot_longer(-time) %>%
+                ggplot(aes(x = time, y = value)) +
+                  geom_line(aes(color = name)) + 
+                  theme_bw() + 
+                  labs(y = expression(paste(hat(mu),"(t)")),
+                       x = "domain") + 
+                  scale_color_manual(values = c("red","blue"), 
+                                     labels = expression(paste(hat(phi)[1],"(t)"),
+                                                         paste(hat(phi)[2],"(t)")))
+
+library(patchwork)
+
+mean_plot + phi_plot + plot_layout(guides = 'collect')   &
+  theme(legend.position = 'bottom',
+        legend.direction = 'horizontal')
 
 ```
 
 
+The plots below shows two examples of observed functions and the respective reconstructions. 
+
+```{r reconstructed_plots, echo = FALSE, fig.align='center', fig.height=3, fig.width=9, dpi = 300}
+
+example1_plot <- cbind(observed = afpca.output$Y[,1], reconstructed = afpca.output$Y_hat[,1]) %>%
+                    as_tibble() %>%
+                    mutate(time = 1:200) %>%
+                    pivot_longer(-time) %>%
+                    ggplot(aes(x = time, y = value)) +
+                      geom_line(aes(color = name)) + 
+                      theme_bw() + 
+                      ylab("value") + xlab("domain") + 
+                      scale_color_manual(values = c("red","black"), name = "Type") + ylim(-.3, 1)
+
+
+example2_plot <- cbind(observed = afpca.output$Y[,7], reconstructed = afpca.output$Y_hat[,7]) %>%
+                    as_tibble() %>%
+                    mutate(time = 1:200) %>%
+                    pivot_longer(-time) %>%
+                    ggplot(aes(x = time, y = value)) +
+                      geom_line(aes(color = name)) + 
+                      theme_bw() + 
+                      ylab("value") + xlab("domain") +  
+                      scale_color_manual(values = c("red","black"), 
+                                         name = "Type") + ylim(-.3, 1)
+
+
+example1_plot + example2_plot + plot_layout(guides = 'collect')  &
+  theme(legend.position = 'bottom',
+        legend.direction = 'horizontal')
+
+
+```
 
 
 
