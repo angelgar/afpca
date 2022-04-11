@@ -14,9 +14,6 @@
 #'
 #' @examples
 #' sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
-#'
-#'
-#'
 simulate_adaptive_functional_data <- function(n.tp = 200,
                                               N.subj = 20,
                                               var.scores = c(4,1),

@@ -48,10 +48,8 @@ The function returns a BLA
 Decomposes functional observations using adaptive functional principal component analysis. This method incorporates adaptive smoothness into the estimated decomposition by using a penalized likelihood framework
 }
 \examples{
-
 sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
 afpca_output <- fpca.adapt(data = sim_data, nbs = 5)
-
 }
 \references{
 Paper
