@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 Adaptive Functional Principal Component Analysis
 
-* Authors: [Angel Garcia de la Garza](http://angelgarciadelagarza.com), [Jeff Goldsmith](https://jeffgoldsmith.com/)
+* Authors: [Angel Garcia de la Garza](http://angelgarciadelagarza.com), [Britton Sauerbrei](https://sauerbreilab.org/), [Jeff Goldsmith](https://jeffgoldsmith.com/)
 * License: [MIT](https://opensource.org/licenses/MIT). See the [LICENSE](LICENSE) file for details
 * Version: 0.9
 

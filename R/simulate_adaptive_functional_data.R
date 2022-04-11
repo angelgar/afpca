@@ -14,6 +14,8 @@
 #' @export
 #'
 #' @examples
+
+#' sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
 simulate_adaptive_functional_data <- function(n.tp = 200,
                                               N.subj = 20,
                                               var.scores = c(4,1),
@@ -67,11 +69,14 @@ simulate_adaptive_functional_data <- function(n.tp = 200,
 
   }
 
+  output <- list(data = data,
+                 data_true = data_true,
+                 Mu_true = Mu_true,
+                 Phi_true = Phi_true,
+                 Scores_true = Scores_true)
 
-  return(list(data = data,
-              data_true = data_true,
-              Mu_true = Mu_true,
-              Phi_true = Phi_true,
-              Scores_true = Scores_true))
+  class(output) <- "fpca_sim_data"
+
+  return(output)
 
 }

@@ -15,7 +15,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 Adaptive Functional Principal Component Analysis
 
 -   Authors: [Angel Garcia de la
-    Garza](http://angelgarciadelagarza.com), [Jeff
+    Garza](http://angelgarciadelagarza.com), [Britton
+    Sauerbrei](https://sauerbreilab.org/), [Jeff
     Goldsmith](https://jeffgoldsmith.com/)
 -   License: [MIT](https://opensource.org/licenses/MIT). See the
     [LICENSE](LICENSE) file for details
