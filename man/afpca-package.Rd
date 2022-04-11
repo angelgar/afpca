@@ -22,6 +22,7 @@ Useful links:
 Authors:
 \itemize{
   \item Jeff Goldsmith \email{jeff.goldsmith@columbia.edu}
+  \item Britton Sauerbrei \email{bxs561@case.edu}
 }
 
 }

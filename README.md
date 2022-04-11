@@ -36,6 +36,8 @@ devtools::install_github("angelgar/afpca")
 
 ## How to use it
 
+This example runs FPCA
+
 ## Citation
 
 ## References

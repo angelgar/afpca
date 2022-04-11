@@ -54,6 +54,10 @@ fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
 
     data <- data$data
 
+  } else if (any(class(data) == "tfd_reg")) {
+
+    data <- data %>% as.matrix()
+
   }
 
   ## Generate Spline Basis
