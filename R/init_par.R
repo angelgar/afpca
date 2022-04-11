@@ -31,7 +31,7 @@ init_par <- function(data, n.comp,
   #                       empirical = T) %>% scale() %>%
   #  as.matrix()
 
-  scores_init <- fpca.face(t(data))$scores %>%
+  scores_init <- refund::fpca.face(t(data))$scores %>%
     matlib::GramSchmidt(normalize = FALSE) %>%
     scale() %>%
     as.matrix()
@@ -41,9 +41,9 @@ init_par <- function(data, n.comp,
   if (n.scores.face < n.comp) {
 
     scores_init <- cbind(scores_init,
-                         mvrnorm(n = N.subj, rep(0,n.comp - n.scores.face),
-                                 Sigma = diag(rep(1,n.comp - n.scores.face)),
-                                 empirical = T)) %>%
+                         MASS::mvrnorm(n = N.subj, rep(0,n.comp - n.scores.face),
+                                       Sigma = diag(rep(1,n.comp - n.scores.face)),
+                                       empirical = T)) %>%
       matlib::GramSchmidt(normalize = FALSE) %>%
       scale() %>%
       as.matrix()

@@ -23,12 +23,13 @@ generate_basis <- function(data, poly.degree = 2, knots = NA,
   Y <- rnorm(dim(data)[2])
 
   if (is.na(knots)) {
-    knots = default.knots(X_temp,nbs)
+    knots = AdaptFitOS::default.knots(X_temp,nbs)
   }
 
   ## Run asp2 to get the spline basis
-  y.fit <- asp2(Y ~ f(X_temp, basis = basis, degree = poly.degree,
-                      adap = F, knots = knots),
+
+  y.fit <- AdaptFitOS::asp2(Y ~ f(X_temp, basis = basis, degree = poly.degree,
+                            adap = F, knots = knots),
                 spar.method = "ML")
 
   Theta_beta = y.fit$design.matrices$Xb

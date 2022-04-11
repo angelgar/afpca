@@ -2,6 +2,7 @@
 
 export(fpca.adapt)
 export(simulate_adaptive_functional_data)
-importFrom(MASS,mvrnorm)
+importFrom(foreach,"%do%")
+importFrom(foreach,foreach)
 importFrom(lifecycle,deprecated)
 importFrom(magrittr,"%>%")

@@ -15,6 +15,9 @@
 #' @param orthogonalize_fpcs orthogonalize FPCs at each iteration (default is true, recommended)
 #' @param ntimes Maximum number of iterations
 #'
+#' @importFrom magrittr %>%
+#' @importFrom foreach foreach %do%
+#'
 #' @references
 #'
 #' Paper
@@ -25,6 +28,9 @@
 #'
 #' @examples
 #'
+#' sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
+#' afpca_output <- fpca.adapt(data = sim_data, nbs = 5)
+#'
 #'
 fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
                            knots = NA, nbs = 35,
@@ -33,7 +39,11 @@ fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
                            orthogonalize_fpcs = TRUE,
                            ntimes = 100) {
 
-  set.seed(1)
+  if (class(data) == "fpca_sim_data") {
+
+    data <- data$data
+
+  }
 
   ## Generate Spline Basis
   Basis <- generate_basis(data, poly.degree, knots,
@@ -166,17 +176,21 @@ fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
 
   }
 
-  return(list(Y = data,
-              Y_hat = reconstructed_data,
-              mean = est_fpc$Mu,
-              fpcs = est_fpc$Phi[,1:fpc_no_keep],
-              scores = c_mat,
-              eigen.values = est_fpc$eigen.vals,
-              Theta = Theta,
-              Basis = Basis,
-              coef = coef,
-              coef_old = coef_old,
-              convergence = convergence,
-              no.iter = no.iter))
+  output <- list(Y = data,
+                 Y_hat = reconstructed_data,
+                 mean = est_fpc$Mu,
+                 fpcs = est_fpc$Phi[,1:fpc_no_keep],
+                 scores = c_mat,
+                 eigen.values = est_fpc$eigen.vals,
+                 Theta = Theta,
+                 Basis = Basis,
+                 coef = coef,
+                 coef_old = coef_old,
+                 convergence = convergence,
+                 no.iter = no.iter)
+
+  class(output) <- "afpca"
+
+  return(output)
 
 }

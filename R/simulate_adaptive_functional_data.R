@@ -1,7 +1,3 @@
-
-
-
-
 #' Simulate Adaptive Functional Data
 #'
 #' @param n.tp number of timepoints
@@ -11,7 +7,6 @@
 #' @param seed.num seed number
 #'
 #' @importFrom magrittr %>%
-#' @importFrom MASS mvrnorm
 #'
 #'
 #' @return
@@ -19,6 +14,9 @@
 #'
 #' @examples
 #' sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
+#'
+#'
+#'
 simulate_adaptive_functional_data <- function(n.tp = 200,
                                               N.subj = 20,
                                               var.scores = c(4,1),
@@ -49,9 +47,9 @@ simulate_adaptive_functional_data <- function(n.tp = 200,
 
   ## True Scores
 
-  Scores_true <- mvrnorm(n = N.subj, rep(0,2),
-                           Sigma = diag(var.scores),
-                           empirical = T)
+  Scores_true <- MASS::mvrnorm(n = N.subj, rep(0,2),
+                               Sigma = diag(var.scores),
+                               empirical = T)
 
   ## Generate Data
 

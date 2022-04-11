@@ -31,4 +31,7 @@ Simulate Adaptive Functional Data
 }
 \examples{
 sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
+
+
+
 }
