@@ -2,23 +2,31 @@
 % Please edit documentation in R/generate_basis.R
 \name{generate_basis}
 \alias{generate_basis}
-\title{Title}
+\title{Generate Spline Basis to estimate FPC}
 \usage{
 generate_basis(
   data,
-  poly.degree = 2,
+  basis = "trunc.poly",
+  poly.degree = 3,
   knots = NA,
-  nbs = 40,
-  basis = "trunc.poly"
+  nbs = 40
 )
 }
 \arguments{
-\item{basis}{}
+\item{data}{input data}
+
+\item{basis}{Type of spline basis. "os" for B-spline basis and "trunc.poly" for truncated polynomials (default)}
+
+\item{poly.degree}{Degree of spline basis}
+
+\item{knots}{passed to AdaptFitOS}
+
+\item{nbs}{number of spline basis}
 }
 \value{
 
 }
 \description{
-Title
+This is an internal function to generate a spline basis used to calculate the FPCs using asp2 from AdaptFitOS
 }
 \keyword{internal}

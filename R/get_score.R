@@ -1,18 +1,18 @@
-#' Title
+#' Generate subject-specific scores given estimates of mean and eigenfunctions
 #'
-#' @param yi
-#' @param Mu
-#' @param Phi
-#' @param sigma
-#' @param n.comp
+#' @description
+#' Internal function to calculate scores
+#'
+#' @param yi one function input data
+#' @param Mu estimated mean
+#' @param Phi matrix of estimated fpcs
+#' @param sigma residual variance
+#' @param n.comp number of estimated fpcs
 #'
 #'
 #' @keywords internal
 #' @return
 #'
-#'
-#'
-#' @examples
 get_score <- function(yi, Mu, Phi, sigma, n.comp) {
 
 

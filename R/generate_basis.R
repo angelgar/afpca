@@ -1,18 +1,20 @@
-#' Title
+#' Generate Spline Basis to estimate FPC
 #'
-#' @param data
-#' @param poly.degree
-#' @param knots
-#' @param nbs
-#' @param basis
+#' @description
+#' This is an internal function to generate a spline basis used to calculate the FPCs using asp2 from AdaptFitOS
+#'
+#' @param data input data
+#' @param basis  Type of spline basis. "os" for B-spline basis and "trunc.poly" for truncated polynomials (default)
+#' @param poly.degree Degree of spline basis
+#' @param knots passed to AdaptFitOS
+#' @param nbs number of spline basis
+
 #'
 #' @keywords internal
 #' @return
-#'
-#' @examples
-generate_basis <- function(data, poly.degree = 2, knots = NA,
-                              nbs = 40,
-                              basis = "trunc.poly") {
+generate_basis <- function(data, basis = "trunc.poly",
+                                 poly.degree = 3, knots = NA,
+                                 nbs = 40) {
 
 
   data <- t(data)

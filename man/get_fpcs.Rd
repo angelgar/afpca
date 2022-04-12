@@ -2,17 +2,27 @@
 % Please edit documentation in R/get_fpcs.R
 \name{get_fpcs}
 \alias{get_fpcs}
-\title{Title}
+\title{Estimate mean function and eigenfunctions given a spline basis and coefficients}
 \usage{
 get_fpcs(Theta, coef, nbs, n.comp, orthogonalize_fpcs, N.Unp.Basis)
 }
 \arguments{
-\item{N.Unp.Basis}{}
+\item{Theta}{spline basis}
+
+\item{coef}{spline coefficients coefficients}
+
+\item{nbs}{total number of spline basis}
+
+\item{n.comp}{number of functional principal components being estimated}
+
+\item{orthogonalize_fpcs}{wether or not to orthogonalize FPCs post estimation}
+
+\item{N.Unp.Basis}{number of unpenalized spline basis}
 }
 \value{
 
 }
 \description{
-Title
+Internal function to estimate mean function and fpcs given spline basis and coefficients
 }
 \keyword{internal}

@@ -17,9 +17,6 @@ get_lambda(coef, n.comp, N.Unp.Basis)
 
 }
 \description{
-Estimate the Adaptive Penalty Matrix (Lambda)
-}
-\examples{
-
+Internal function to estimate the Adaptive penalty matrix
 }
 \keyword{internal}

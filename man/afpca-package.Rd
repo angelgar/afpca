@@ -6,7 +6,7 @@
 \alias{afpca-package}
 \title{afpca: Adaptive Functional Principal Component Analysis}
 \description{
-A method for integrating adaptive smoothness into functional principal component analysis
+An implementation of adaptively smootheded functional principal component analysis.
 }
 \seealso{
 Useful links:

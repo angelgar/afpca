@@ -1,20 +1,20 @@
-#' Title
+#' Estimate likelihood of the data
 #'
-#' @param data
-#' @param coef
-#' @param Theta
-#' @param c_mat
-#' @param N.Unp.Basis
-#' @param nbs
-#' @param n.comp
-#' @param lambda
-#' @param sigma
+#' @description
+#' Internal function to estimate the likelihood of the data, used to check algorithm converges
+#'
+#' @param data input data
+#' @param coef spline coefficients
+#' @param Theta spline basis
+#' @param c_mat matrix of scores
+#' @param N.Unp.Basis number of unpenalized spline basis
+#' @param nbs total number of spline basis
+#' @param n.comp number of components being estimated
+#' @param lambda penalty function
+#' @param sigma residual variance
 #'
 #' @keywords internal
 #' @return
-#'
-#'
-#' @examples
 get_likelihood <- function(data, coef, Theta, c_mat,
                            N.Unp.Basis, nbs, n.comp, lambda, sigma) {
 

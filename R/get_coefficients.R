@@ -1,20 +1,20 @@
-#' Title
+#' Get the spline basis coefficients
 #'
-#' @param data
-#' @param c_mat
-#' @param Theta
-#' @param Lambda
-#' @param sigma
-#' @param N.Unp.Basis
-#' @param nbs
+#' @description
+#' Internal function to estimate the spline basis coefficients given the scores and adaptive penalty
+#'
+#' @param data data input data
+#' @param c_mat matrix of scores
+#' @param Theta spline basis
+#' @param Lambda penalty matrix
+#' @param sigma residual variance
+#' @param N.Unp.Basis number of unpelized spline basis
+#' @param nbs total number of spline basis
 #'
 #'
 #' @keywords internal
 #' @return
 #'
-#'
-#'
-#' @examples
 get_coefficients <- function(data, c_mat, Theta, Lambda, sigma,
                              N.Unp.Basis, nbs) {
 

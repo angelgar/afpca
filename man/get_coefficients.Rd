@@ -2,17 +2,29 @@
 % Please edit documentation in R/get_coefficients.R
 \name{get_coefficients}
 \alias{get_coefficients}
-\title{Title}
+\title{Get the spline basis coefficients}
 \usage{
 get_coefficients(data, c_mat, Theta, Lambda, sigma, N.Unp.Basis, nbs)
 }
 \arguments{
-\item{nbs}{}
+\item{data}{data input data}
+
+\item{c_mat}{matrix of scores}
+
+\item{Theta}{spline basis}
+
+\item{Lambda}{penalty matrix}
+
+\item{sigma}{residual variance}
+
+\item{N.Unp.Basis}{number of unpelized spline basis}
+
+\item{nbs}{total number of spline basis}
 }
 \value{
 
 }
 \description{
-Title
+Internal function to estimate the spline basis coefficients given the scores and adaptive penalty
 }
 \keyword{internal}

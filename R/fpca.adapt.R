@@ -4,7 +4,7 @@
 #' Decomposes functional observations using adaptive functional principal component analysis. This method incorporates adaptive smoothness into the estimated decomposition by using a penalized likelihood framework
 #'
 #' @param data A data frame, matrix, or a tidyfun "tfd.reg" object of functional observations.
-#' @param basis Type of spline basis
+#' @param basis Type of spline basis. "os" for B-spline basis and "trunc.poly" for truncated polynomials (default)
 #' @param poly.degree The degree of the the spline basis
 #' @param knots Number of knots used to generate a spline basis to estimate the mean function and functional principal components
 #' @param nbs Number of spline basis to generate mean function and functional principal components
@@ -41,14 +41,50 @@
 #' @export
 #'
 #' @examples
-#' sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
-#' afpca_output <- fpca.adapt(data = sim_data, nbs = 5)
+#' sim_data <- simulate_adaptive_functional_data(n.tp = 100)
+#' afpca_output <- fpca.adapt(data = sim_data, nbs = 10)
 fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
                            knots = NA, nbs = 35,
                            n.comp = 18, pve = 0.99,
                            normalize.scores = TRUE, orthogonalize_scores = TRUE,
                            orthogonalize_fpcs = TRUE,
                            ntimes = 100) {
+
+
+  ## Check that these's no issues with the flags
+
+  if (n.comp < 1 | is.null(n.comp)) {
+
+    stop("Please specify the proper number of functional fpcs (at least two)")
+
+  }
+
+  if (!(dplyr::between(pve, 0, 1)) | is.null(n.comp)) {
+
+    stop("Please specify a proper proportion of variance explained (PVE between 0 and 1)")
+
+  }
+
+  if (nbs < 2 | is.null(nbs)) {
+
+    stop("Please specify a proper proportion of spline basis")
+
+  }
+
+  if (!(is.logical(c(normalize.scores, orthogonalize_scores, orthogonalize_fpcs)))) {
+
+    stop("Orthonormalization flags need a logical (T/F) input")
+
+  }
+
+  if (ntimes < 3) {
+
+    stop("Not enough iterations in the algorithm")
+
+  }
+
+
+  ## Process data based on input
 
   if (class(data) == "fpca_sim_data") {
 
@@ -61,9 +97,9 @@ fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
   }
 
   ## Generate Spline Basis
-  Basis <- generate_basis(data, poly.degree, knots,
-                             nbs,
-                             basis)
+  Basis <- generate_basis(data = data, basis = basis, poly.degree = poly.degree,
+                          knots = knots, nbs = nbs)
+
   Theta <- Basis$Theta
   N.Unp.Basis <- dim(Basis$Theta_beta)[2]
   nbs <- dim(Basis$Theta_b)[2]

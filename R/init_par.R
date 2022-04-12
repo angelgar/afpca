@@ -1,23 +1,23 @@
-#' Title
+#' Get initial values for parameters (scores estimated from FPCA.FACE and coefficients from OLS)
 #'
-#' @param data
-#' @param n.comp
-#' @param Theta
-#' @param orthogonalize_fpcs
-#' @param N.Unp.Basis
+#' @description
+#' Internal function to get scores given all other parameters
 #'
+#' @param data input data
+#' @param n.comp number of fpcs being calculated
+#' @param Theta spline basis matrix
+#' @param orthogonalize_fpcs wether or not to orthogonalize estimated fpcs
+#' @param N.Unp.Basis number of unpenalized spline basis
+#'
+#' @importFrom stats coef lm rnorm
 #'
 #' @keywords internal
 #' @return
 #'
-#'
-#'
-#' @examples
 init_par <- function(data, n.comp,
                      Theta,
                      orthogonalize_fpcs,
                      N.Unp.Basis) {
-
 
   t <- dim(data)[1]
   N.subj <- dim(data)[2]

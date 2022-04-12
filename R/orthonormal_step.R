@@ -1,16 +1,16 @@
-#' Title
+#' Function to orthonormalize (or orthogonalize) scores
 #'
-#' @param c_mat
-#' @param orthogonalize_scores
-#' @param normalize.scores
+#' @description
+#' Internal function to orthonormalize or orthogonalize scores
+#'
+#' @param c_mat matrix of scores
+#' @param orthogonalize_scores logical; wether to orthogonalize scores
+#' @param normalize.scores logical; wether to normalize scores
 #'
 #'
 #' @keywords internal
 #' @return
 #'
-#'
-#'
-#' @examples
 orthonormal_step <- function(c_mat, orthogonalize_scores,
                              normalize.scores) {
 

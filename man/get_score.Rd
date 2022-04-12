@@ -2,17 +2,25 @@
 % Please edit documentation in R/get_score.R
 \name{get_score}
 \alias{get_score}
-\title{Title}
+\title{Generate subject-specific scores given estimates of mean and eigenfunctions}
 \usage{
 get_score(yi, Mu, Phi, sigma, n.comp)
 }
 \arguments{
-\item{n.comp}{}
+\item{yi}{one function input data}
+
+\item{Mu}{estimated mean}
+
+\item{Phi}{matrix of estimated fpcs}
+
+\item{sigma}{residual variance}
+
+\item{n.comp}{number of estimated fpcs}
 }
 \value{
 
 }
 \description{
-Title
+Internal function to calculate scores
 }
 \keyword{internal}

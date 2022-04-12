@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">afpca</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +71,7 @@
     <dl><dt>data</dt>
 <dd><p>A data frame, matrix, or a tidyfun "tfd.reg" object of functional observations.</p></dd>
 <dt>basis</dt>
-<dd><p>Type of spline basis</p></dd>
+<dd><p>Type of spline basis. "os" for B-spline basis and "trunc.poly" for truncated polynomials (default)</p></dd>
 <dt>poly.degree</dt>
 <dd><p>The degree of the the spline basis</p></dd>
 <dt>knots</dt>
@@ -124,8 +124,8 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">sim_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="simulate_adaptive_functional_data.html">simulate_adaptive_functional_data</a></span><span class="op">(</span>n.tp <span class="op">=</span> <span class="fl">100</span>, N.subj <span class="op">=</span> <span class="fl">25</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">afpca_output</span> <span class="op">&lt;-</span> <span class="fu">fpca.adapt</span><span class="op">(</span>data <span class="op">=</span> <span class="va">sim_data</span>, nbs <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">sim_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="simulate_adaptive_functional_data.html">simulate_adaptive_functional_data</a></span><span class="op">(</span>n.tp <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">afpca_output</span> <span class="op">&lt;-</span> <span class="fu">fpca.adapt</span><span class="op">(</span>data <span class="op">=</span> <span class="va">sim_data</span>, nbs <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

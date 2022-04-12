@@ -1,13 +1,13 @@
 Package: afpca
 Title: Adaptive Functional Principal Component Analysis
-Version: 0.0.0.9000
+Version: 0.0.0.9
 Authors@R: 
     c(person("Angel", "Garcia de la Garza", , "ag3914@columbia.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6062-5190")),
       person("Jeff", "Goldsmith", role = "aut", email = "jeff.goldsmith@columbia.edu"),
       person("Britton", "Sauerbrei", role = "aut", email = "bxs561@case.edu")
     )
-Description: A method for integrating adaptive smoothness into functional principal component analysis
+Description: An implementation of adaptively smootheded functional principal component analysis.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -30,8 +30,7 @@ Suggests:
     spelling,
     testthat (>= 3.0.0),
     tidyfun (>= 0.0.95)
-Remotes: 
-    tidyfun/tidyfun
+Additional_repositories: https://tidyfun.github.io/tidyfun
 URL: https://github.com/angelgar/afpca
 BugReports: https://github.com/angelgar/afpca/issues
 Language: en-US

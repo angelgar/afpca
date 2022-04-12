@@ -2,17 +2,25 @@
 % Please edit documentation in R/init_par.R
 \name{init_par}
 \alias{init_par}
-\title{Title}
+\title{Get initial values for parameters (scores estimated from FPCA.FACE and coefficients from OLS)}
 \usage{
 init_par(data, n.comp, Theta, orthogonalize_fpcs, N.Unp.Basis)
 }
 \arguments{
-\item{N.Unp.Basis}{}
+\item{data}{input data}
+
+\item{n.comp}{number of fpcs being calculated}
+
+\item{Theta}{spline basis matrix}
+
+\item{orthogonalize_fpcs}{wether or not to orthogonalize estimated fpcs}
+
+\item{N.Unp.Basis}{number of unpenalized spline basis}
 }
 \value{
 
 }
 \description{
-Title
+Internal function to get scores given all other parameters
 }
 \keyword{internal}

@@ -1,19 +1,18 @@
-#' Title
+#' Estimate residual variance
 #'
-#' @param data
-#' @param coef
-#' @param Theta
-#' @param c_mat
-#' @param N.Unp.Basis
-#' @param nbs
+#' @description internal function to estimate resisual variance
+#'
+#' @param data input data
+#' @param coef estimated spline coefficients
+#' @param Theta spline basis matrix
+#' @param c_mat scores matrix
+#' @param N.Unp.Basis number of unpenalized spline basis
+#' @param nbs total number of spline basis
 #'
 #'
 #' @keywords internal
 #' @return
 #'
-#'
-#'
-#' @examples
 get_sigma <- function(data, coef, Theta, c_mat, N.Unp.Basis, nbs) {
 
 

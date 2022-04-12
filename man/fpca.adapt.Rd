@@ -21,7 +21,7 @@ fpca.adapt(
 \arguments{
 \item{data}{A data frame, matrix, or a tidyfun "tfd.reg" object of functional observations.}
 
-\item{basis}{Type of spline basis}
+\item{basis}{Type of spline basis. "os" for B-spline basis and "trunc.poly" for truncated polynomials (default)}
 
 \item{poly.degree}{The degree of the the spline basis}
 
@@ -60,8 +60,8 @@ The function returns an object of class "afpca" that contains the following:
 Decomposes functional observations using adaptive functional principal component analysis. This method incorporates adaptive smoothness into the estimated decomposition by using a penalized likelihood framework
 }
 \examples{
-sim_data <- simulate_adaptive_functional_data(n.tp = 100, N.subj = 25)
-afpca_output <- fpca.adapt(data = sim_data, nbs = 5)
+sim_data <- simulate_adaptive_functional_data(n.tp = 100)
+afpca_output <- fpca.adapt(data = sim_data, nbs = 10)
 }
 \references{
 Paper

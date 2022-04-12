@@ -1,19 +1,19 @@
-#' Title
+#' Estimate mean function and eigenfunctions given a spline basis and coefficients
 #'
-#' @param Theta
-#' @param coef
-#' @param nbs
-#' @param n.comp
-#' @param orthogonalize_fpcs
-#' @param N.Unp.Basis
+#' @description
+#' Internal function to estimate mean function and fpcs given spline basis and coefficients
+#'
+#' @param Theta spline basis
+#' @param coef spline coefficients coefficients
+#' @param nbs total number of spline basis
+#' @param n.comp number of functional principal components being estimated
+#' @param orthogonalize_fpcs wether or not to orthogonalize FPCs post estimation
+#' @param N.Unp.Basis number of unpenalized spline basis
 #'
 #'
 #' @keywords internal
 #' @return
 #'
-#'
-#'
-#' @examples
 get_fpcs <- function(Theta,
                      coef, nbs, n.comp,
                      orthogonalize_fpcs,

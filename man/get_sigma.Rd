@@ -2,17 +2,27 @@
 % Please edit documentation in R/get_sigma.R
 \name{get_sigma}
 \alias{get_sigma}
-\title{Title}
+\title{Estimate residual variance}
 \usage{
 get_sigma(data, coef, Theta, c_mat, N.Unp.Basis, nbs)
 }
 \arguments{
-\item{nbs}{}
+\item{data}{input data}
+
+\item{coef}{estimated spline coefficients}
+
+\item{Theta}{spline basis matrix}
+
+\item{c_mat}{scores matrix}
+
+\item{N.Unp.Basis}{number of unpenalized spline basis}
+
+\item{nbs}{total number of spline basis}
 }
 \value{
 
 }
 \description{
-Title
+internal function to estimate resisual variance
 }
 \keyword{internal}

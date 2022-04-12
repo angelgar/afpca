@@ -2,17 +2,21 @@
 % Please edit documentation in R/orthonormal_step.R
 \name{orthonormal_step}
 \alias{orthonormal_step}
-\title{Title}
+\title{Function to orthonormalize (or orthogonalize) scores}
 \usage{
 orthonormal_step(c_mat, orthogonalize_scores, normalize.scores)
 }
 \arguments{
-\item{normalize.scores}{}
+\item{c_mat}{matrix of scores}
+
+\item{orthogonalize_scores}{logical; wether to orthogonalize scores}
+
+\item{normalize.scores}{logical; wether to normalize scores}
 }
 \value{
 
 }
 \description{
-Title
+Internal function to orthonormalize or orthogonalize scores
 }
 \keyword{internal}

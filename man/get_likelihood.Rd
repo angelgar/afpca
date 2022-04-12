@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_likelihood.R
 \name{get_likelihood}
 \alias{get_likelihood}
-\title{Title}
+\title{Estimate likelihood of the data}
 \usage{
 get_likelihood(
   data,
@@ -17,12 +17,28 @@ get_likelihood(
 )
 }
 \arguments{
-\item{sigma}{}
+\item{data}{input data}
+
+\item{coef}{spline coefficients}
+
+\item{Theta}{spline basis}
+
+\item{c_mat}{matrix of scores}
+
+\item{N.Unp.Basis}{number of unpenalized spline basis}
+
+\item{nbs}{total number of spline basis}
+
+\item{n.comp}{number of components being estimated}
+
+\item{lambda}{penalty function}
+
+\item{sigma}{residual variance}
 }
 \value{
 
 }
 \description{
-Title
+Internal function to estimate the likelihood of the data, used to check algorithm converges
 }
 \keyword{internal}
