@@ -30,6 +30,8 @@ Suggests:
     spelling,
     testthat (>= 3.0.0),
     tidyfun (>= 0.0.95)
+Remotes:
+    git::https://github.com/tidyfun/tidyfun.git
 URL: https://github.com/angelgar/afpca
 BugReports: https://github.com/angelgar/afpca/issues
 Language: en-US
