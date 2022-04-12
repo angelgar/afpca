@@ -42,7 +42,7 @@ These are examples of running adaptive FPCA. More details of the use of
 the package can be found in XYZ.
 
 The code below uses a the function
-`afpca::simulate_adaptive_functional_data()` to simulate 40 curves
+`afpca::simulate_adaptive_functional_data()` to simulate 20 curves
 *Y*<sub>*i*</sub>(*t*), *i* = 1, …, 20 observed over 200 time points on
 a common grid over domain (0,1) with gaussian noise. These functions are
 generated from a mean function and two functional principal components
