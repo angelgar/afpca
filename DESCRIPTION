@@ -33,7 +33,8 @@ Suggests:
     testthat (>= 3.0.0),
 Enhances:
     tidyfun (>= 0.0.95)
-Additional_repositories: https://tidyfun.github.io/tidyfun/
+Remotes:
+    tidyfun/tidyfun
 URL: https://github.com/angelgar/afpca
 BugReports: https://github.com/angelgar/afpca/issues
 Language: en-US
