@@ -35,9 +35,6 @@ get_likelihood(
 
 \item{sigma}{residual variance}
 }
-\value{
-
-}
 \description{
 Internal function to estimate the likelihood of the data, used to check algorithm converges
 }

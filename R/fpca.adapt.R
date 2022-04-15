@@ -4,6 +4,7 @@
 #' Decomposes functional observations using adaptive functional principal component analysis. This method incorporates adaptive smoothness into the estimated decomposition by using a penalized likelihood framework
 #'
 #' @param data A data frame, matrix, or a tidyfun "tfd.reg" object of functional observations.
+#' @param col_name Column name of the data. Required if Y is a tibble. The package expects the column to be a "dft" object from tidyfun
 #' @param basis Type of spline basis. "os" for B-spline basis and "trunc.poly" for truncated polynomials (default)
 #' @param poly.degree The degree of the the spline basis
 #' @param knots Number of knots used to generate a spline basis to estimate the mean function and functional principal components
@@ -25,7 +26,8 @@
 #'
 #' @return The function returns an object of class "afpca" that contains the following:
 #'
-#' \item{Y}{The observed data.}
+#' \item{Y}{The observed data. Pass either a matrix, a "dft" object from tidyverse,
+#' or a tibble. If a tibble is passed, then "col_name" is required}
 #' \item{Y_hat}{The reconstructed fitted values}
 #' \item{mean}{a vector of the estimated mean function}
 #' \item{fpcs}{a tp (number of timepoints) by npc (number of fpcs) matrix of the estimated eigenfunctions}
@@ -43,7 +45,7 @@
 #' @examples
 #' sim_data <- simulate_adaptive_functional_data(n.tp = 100)
 #' afpca_output <- fpca.adapt(data = sim_data, nbs = 10)
-fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
+fpca.adapt <- function(data, col_name = "name", basis = "trunc.poly", poly.degree = 2,
                            knots = NA, nbs = 35,
                            n.comp = 18, pve = 0.99,
                            normalize.scores = TRUE, orthogonalize_scores = TRUE,
@@ -54,33 +56,23 @@ fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
   ## Check that these's no issues with the flags
 
   if (n.comp < 1 | is.null(n.comp)) {
-
     stop("Please specify the proper number of functional fpcs (at least two)")
-
   }
 
   if (!(dplyr::between(pve, 0, 1)) | is.null(n.comp)) {
-
     stop("Please specify a proper proportion of variance explained (PVE between 0 and 1)")
-
   }
 
   if (nbs < 2 | is.null(nbs)) {
-
     stop("Please specify a proper proportion of spline basis")
-
   }
 
   if (!(is.logical(c(normalize.scores, orthogonalize_scores, orthogonalize_fpcs)))) {
-
     stop("Orthonormalization flags need a logical (T/F) input")
-
   }
 
   if (ntimes < 3) {
-
     stop("Not enough iterations in the algorithm")
-
   }
 
 
@@ -93,6 +85,14 @@ fpca.adapt <- function(data, basis = "trunc.poly", poly.degree = 2,
   } else if (any(class(data) == "tfd_reg")) {
 
     data <- data %>% as.matrix()
+
+  } else if (any(class(data)) == "tbl_df") {
+
+    if (is.null(col_name)) {
+      stop("col_name is required if passing a tibble. Specify column name")
+    }
+
+    data <- data[[col_name]] %>% as.matrix()
 
   }
 

@@ -14,7 +14,6 @@
 #' @param sigma residual variance
 #'
 #' @keywords internal
-#' @return
 get_likelihood <- function(data, coef, Theta, c_mat,
                            N.Unp.Basis, nbs, n.comp, lambda, sigma) {
 

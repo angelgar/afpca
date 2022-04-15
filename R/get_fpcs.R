@@ -12,8 +12,6 @@
 #'
 #'
 #' @keywords internal
-#' @return
-#'
 get_fpcs <- function(Theta,
                      coef, nbs, n.comp,
                      orthogonalize_fpcs,

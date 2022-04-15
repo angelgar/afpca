@@ -11,8 +11,6 @@
 #'
 #'
 #' @keywords internal
-#' @return
-#'
 get_sigma <- function(data, coef, Theta, c_mat, N.Unp.Basis, nbs) {
 
 

@@ -9,8 +9,6 @@
 #'
 #'
 #' @keywords internal
-#' @return
-#'
 orthonormal_step <- function(c_mat, orthogonalize_scores,
                              normalize.scores) {
 

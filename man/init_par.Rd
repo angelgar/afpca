@@ -17,9 +17,6 @@ init_par(data, n.comp, Theta, orthogonalize_fpcs, N.Unp.Basis)
 
 \item{N.Unp.Basis}{number of unpenalized spline basis}
 }
-\value{
-
-}
 \description{
 Internal function to get scores given all other parameters
 }

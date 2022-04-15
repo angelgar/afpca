@@ -8,10 +8,8 @@
 #' @param poly.degree Degree of spline basis
 #' @param knots passed to AdaptFitOS
 #' @param nbs number of spline basis
-
 #'
 #' @keywords internal
-#' @return
 generate_basis <- function(data, basis = "trunc.poly",
                                  poly.degree = 3, knots = NA,
                                  nbs = 40) {

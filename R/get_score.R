@@ -11,8 +11,6 @@
 #'
 #'
 #' @keywords internal
-#' @return
-#'
 get_score <- function(yi, Mu, Phi, sigma, n.comp) {
 
 

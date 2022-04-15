@@ -23,9 +23,6 @@ generate_basis(
 
 \item{nbs}{number of spline basis}
 }
-\value{
-
-}
 \description{
 This is an internal function to generate a spline basis used to calculate the FPCs using asp2 from AdaptFitOS
 }

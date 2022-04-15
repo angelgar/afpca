@@ -19,9 +19,6 @@ get_fpcs(Theta, coef, nbs, n.comp, orthogonalize_fpcs, N.Unp.Basis)
 
 \item{N.Unp.Basis}{number of unpenalized spline basis}
 }
-\value{
-
-}
 \description{
 Internal function to estimate mean function and fpcs given spline basis and coefficients
 }

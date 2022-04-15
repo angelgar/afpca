@@ -6,6 +6,7 @@
 \usage{
 fpca.adapt(
   data,
+  col_name = "name",
   basis = "trunc.poly",
   poly.degree = 2,
   knots = NA,
@@ -20,6 +21,8 @@ fpca.adapt(
 }
 \arguments{
 \item{data}{A data frame, matrix, or a tidyfun "tfd.reg" object of functional observations.}
+
+\item{col_name}{Column name of the data. Required if Y is a tibble. The package expects the column to be a "dft" object from tidyfun}
 
 \item{basis}{Type of spline basis. "os" for B-spline basis and "trunc.poly" for truncated polynomials (default)}
 
@@ -44,7 +47,8 @@ fpca.adapt(
 \value{
 The function returns an object of class "afpca" that contains the following:
 
-\item{Y}{The observed data.}
+\item{Y}{The observed data. Pass either a matrix, a "dft" object from tidyverse,
+or a tibble. If a tibble is passed, then "col_name" is required}
 \item{Y_hat}{The reconstructed fitted values}
 \item{mean}{a vector of the estimated mean function}
 \item{fpcs}{a tp (number of timepoints) by npc (number of fpcs) matrix of the estimated eigenfunctions}

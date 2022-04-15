@@ -17,9 +17,6 @@ get_score(yi, Mu, Phi, sigma, n.comp)
 
 \item{n.comp}{number of estimated fpcs}
 }
-\value{
-
-}
 \description{
 Internal function to calculate scores
 }

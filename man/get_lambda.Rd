@@ -13,9 +13,6 @@ get_lambda(coef, n.comp, N.Unp.Basis)
 
 \item{N.Unp.Basis}{Number of Unpenalized Basis}
 }
-\value{
-
-}
 \description{
 Internal function to estimate the Adaptive penalty matrix
 }

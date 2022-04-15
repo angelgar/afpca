@@ -19,9 +19,6 @@ get_sigma(data, coef, Theta, c_mat, N.Unp.Basis, nbs)
 
 \item{nbs}{total number of spline basis}
 }
-\value{
-
-}
 \description{
 internal function to estimate resisual variance
 }

@@ -13,9 +13,6 @@ orthonormal_step(c_mat, orthogonalize_scores, normalize.scores)
 
 \item{normalize.scores}{logical; wether to normalize scores}
 }
-\value{
-
-}
 \description{
 Internal function to orthonormalize or orthogonalize scores
 }

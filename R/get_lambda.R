@@ -8,8 +8,6 @@
 #' @param N.Unp.Basis Number of Unpenalized Basis
 #'
 #' @keywords internal
-#' @return
-#'
 get_lambda <- function(coef, n.comp, N.Unp.Basis) {
 
 

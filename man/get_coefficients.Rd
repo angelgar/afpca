@@ -21,9 +21,6 @@ get_coefficients(data, c_mat, Theta, Lambda, sigma, N.Unp.Basis, nbs)
 
 \item{nbs}{total number of spline basis}
 }
-\value{
-
-}
 \description{
 Internal function to estimate the spline basis coefficients given the scores and adaptive penalty
 }

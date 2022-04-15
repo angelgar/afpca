@@ -13,8 +13,6 @@
 #'
 #'
 #' @keywords internal
-#' @return
-#'
 get_coefficients <- function(data, c_mat, Theta, Lambda, sigma,
                              N.Unp.Basis, nbs) {
 

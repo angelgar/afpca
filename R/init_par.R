@@ -12,8 +12,6 @@
 #' @importFrom stats coef lm rnorm
 #'
 #' @keywords internal
-#' @return
-#'
 init_par <- function(data, n.comp,
                      Theta,
                      orthogonalize_fpcs,
