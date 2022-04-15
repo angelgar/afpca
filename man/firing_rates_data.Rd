@@ -13,7 +13,7 @@ A data frame with 25 rows and two columns including:
 }
 }
 \usage{
-data(firing_rates_data)
+firing_rates_data
 }
 \description{
 This dataset comes from a novel neuroscience research to understand the
