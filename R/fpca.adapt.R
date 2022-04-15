@@ -43,8 +43,19 @@
 #' @export
 #'
 #' @examples
+#'
+#' ## Using simulated data
 #' sim_data <- simulate_adaptive_functional_data(n.tp = 100)
 #' afpca_output <- fpca.adapt(data = sim_data, nbs = 10)
+#'
+#' ## Using firing rate data (uses tidyfun, install beforehand)
+#'
+#' if (FALSE) {
+#'   data(firing_rates_data)
+#'   afpca_firing_output <- fpca.adapt(data = firing_rates_data, col_name = "activation", nbs = 10)
+#' }
+#'
+#'
 fpca.adapt <- function(data, col_name = "name", basis = "trunc.poly", poly.degree = 2,
                            knots = NA, nbs = 35,
                            n.comp = 18, pve = 0.99,

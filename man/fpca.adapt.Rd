@@ -64,8 +64,19 @@ or a tibble. If a tibble is passed, then "col_name" is required}
 Decomposes functional observations using adaptive functional principal component analysis. This method incorporates adaptive smoothness into the estimated decomposition by using a penalized likelihood framework
 }
 \examples{
+
+## Using simulated data
 sim_data <- simulate_adaptive_functional_data(n.tp = 100)
 afpca_output <- fpca.adapt(data = sim_data, nbs = 10)
+
+## Using firing rate data (uses tidyfun, install beforehand)
+
+if (FALSE) {
+  data(firing_rates_data)
+  afpca_firing_output <- fpca.adapt(data = firing_rates_data, col_name = "activation", nbs = 10)
+}
+
+
 }
 \references{
 Paper
