@@ -24,7 +24,7 @@ Adaptive Functional Principal Component Analysis
 
 ## What is does
 
-TEXT TEXT
+`afpca` implements Adaptive Functional Principal Component Analysis (aFPCA), a method for estimating directions of variation in functional data that exhibit sharp changes in smoothness. Standard FPCA methods impose a global smoothness assumption that can fail to capture abrupt transitions in the underlying signal. `afpca` addresses this by combining a fast and scalable adaptive scatterplot smoothing technique with a probabilistic FPCA framework, allowing functional principal components to be smoothed adaptively. This is particularly useful in applications such as neural recordings, where sharp changes in activity following a stimulus must be distinguished from smooth baseline behavior.
 
 ## Installation
 
