@@ -5,9 +5,6 @@
 
 <!-- badges: start -->
 
-[![CRAN
-status](https://www.r-pkg.org/badges/version/afpca)](https://CRAN.R-project.org/package=afpca)
-[![R-CMD-check](https://github.com/angelgar/afpca/workflows/R-CMD-check/badge.svg)](https://github.com/angelgar/afpca/actions)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
@@ -24,7 +21,7 @@ Adaptive Functional Principal Component Analysis
 
 ## What is does
 
-TEXT TEXT
+afpca implements Adaptive Functional Principal Component Analysis (aFPCA), a method for estimating directions of variation in functional data that exhibit sharp changes in smoothness. Standard FPCA methods impose a global smoothness assumption that can fail to capture abrupt transitions in the underlying signal. afpca addresses this by combining a fast and scalable adaptive scatterplot smoothing technique with a probabilistic FPCA framework, allowing functional principal components to be smoothed adaptively. This is particularly useful in applications such as neural recordings, where sharp changes in activity following a stimulus must be distinguished from smooth baseline behavior.
 
 ## Installation
 
@@ -35,6 +32,17 @@ You can install the development version of afpca from
 install.packages("devtools")
 devtools::install_github("angelgar/afpca")
 ```
+
+afpca requires both SemiPar and AdaptFitOS which you can install with:
+
+``` r
+
+devtools::install_github("cran/SemiPar")
+devtools::install_github("cran/AdaptFitOS")
+
+
+```
+
 
 ## How to use it
 
