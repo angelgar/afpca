@@ -54,9 +54,6 @@ principal components with varying temporal smoothness defined as:
 library(afpca)
 
 simulated_data <- simulate_adaptive_functional_data(N.subj = 20)
-#> Warning in rgl.init(initValue, onlyNULL): X11 error: GLXBadContext
-#> Warning: 'rgl.init' failed, will use the null device.
-#> See '?rgl.useNULL' for ways to avoid this warning.
 ```
 
 The plot below show what this simulated data looks like:
@@ -71,9 +68,6 @@ analysis. The main function in our package to do this is
 
 
 afpca.output <- fpca.adapt(data = simulated_data)
-#> Registered S3 method overwritten by 'lme4':
-#>   method           from
-#>   na.action.merMod car
 ```
 
 The plots below show the estimated mean function and functional

@@ -143,13 +143,7 @@ Paper
 
 ## Using simulated data
 sim_data <- simulate_adaptive_functional_data(n.tp = 100)
-#> Warning: RGL: unable to open X11 display
-#> Warning: 'rgl.init' failed, will use the null device.
-#> See '?rgl.useNULL' for ways to avoid this warning.
 afpca_output <- fpca.adapt(data = sim_data, nbs = 10)
-#> Registered S3 method overwritten by 'lme4':
-#>   method           from
-#>   na.action.merMod car 
 
 ## Using firing rate data (uses tidyfun, install beforehand)
 
