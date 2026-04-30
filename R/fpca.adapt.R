@@ -89,15 +89,15 @@ fpca.adapt <- function(data, col_name = "name", basis = "trunc.poly", poly.degre
 
   ## Process data based on input
 
-  if (class(data) == "fpca_sim_data") {
+  if (inherits(data, "fpca_sim_data")) {
 
     data <- data$data
 
-  } else if (any(class(data) == "tfd_reg")) {
+  } else if (inherits(data, "tfd_reg")) {
 
     data <- data %>% as.matrix()
 
-  } else if (any(class(data)) == "tbl_df") {
+  } else if (inherits(data, "tbl_df")) {
 
     if (is.null(col_name)) {
       stop("col_name is required if passing a tibble. Specify column name")

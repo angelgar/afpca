@@ -7,3 +7,6 @@
 ^\.github$
 ^README\.Rmd$
 ^data-raw$
+^\.positai$
+^\.claude$
+^codecov\.yml$
