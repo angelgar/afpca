@@ -15,12 +15,10 @@ orthonormal_step <- function(c_mat, orthogonalize_scores,
 
   if (orthogonalize_scores) {
     if (normalize.scores) {
-      c_mat <- c_mat %>%
-        matlib::GramSchmidt(normalize = FALSE) %>%
+      c_mat <- qr.Q(qr(c_mat)) %>%
         scale()
     } else {
-      c_mat <- c_mat %>%
-        matlib::GramSchmidt(normalize = FALSE)
+      c_mat <- qr.Q(qr(c_mat))
     }
   }
 

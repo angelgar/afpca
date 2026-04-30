@@ -20,7 +20,6 @@ Imports:
     lifecycle,
     magrittr,
     MASS,
-    matlib,
     Matrix,
     refund,
     stats,
@@ -30,8 +29,7 @@ Config/testthat/edition: 3
 Suggests: 
     spelling,
     testthat (>= 3.0.0),
-Enhances:
-    tidyfun (>= 0.0.95)
+    tidyfun
 Remotes:
     tidyfun/tidyfun
 URL: https://github.com/angelgar/afpca

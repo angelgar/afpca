@@ -49,7 +49,7 @@ simulate_adaptive_functional_data <- function(n.tp = 200,
   t(Phi_true) %*% Phi_true
 
   ## I'm just forcing it so that it is numerically orthonormal
-  Phi_true <- Phi_true %>% matlib::GramSchmidt(normalize = T)
+  Phi_true <- qr.Q(qr(Phi_true))
 
   Phi_true <- Phi_true*-1
 
