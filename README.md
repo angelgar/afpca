@@ -93,3 +93,7 @@ respective reconstructions.
 <img src="man/figures/README-reconstructed_plots-1.png" alt="" style="display: block; margin: auto;" />
 
 ## Citation
+
+Garcia de la Garza, A., Sauerbrei, B., Hantman, A., & Goldsmith, J.
+(2023). Adaptive Functional Principal Component Analysis. arXiv preprint
+arXiv:2310.01760.

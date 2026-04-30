@@ -154,5 +154,5 @@ example1_plot + example2_plot + plot_layout(guides = 'collect')  &
 
 ## Citation
 
-
+Garcia de la Garza, A., Sauerbrei, B., Hantman, A., & Goldsmith, J. (2023). Adaptive Functional Principal Component Analysis. arXiv preprint arXiv:2310.01760.
 
