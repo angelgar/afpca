@@ -130,7 +130,7 @@ example1_plot <- cbind(observed = afpca.output$Y[,1], reconstructed = afpca.outp
                       geom_line(aes(color = name)) + 
                       theme_bw() + 
                       ylab("value") + xlab("domain") + 
-                      scale_color_manual(values = c("red","black"), name = "Type") + ylim(-.3, 1)
+                      scale_color_manual(values = c("red","black"), name = "Type") + ylim(-.6, 1)
 
 
 example2_plot <- cbind(observed = afpca.output$Y[,7], reconstructed = afpca.output$Y_hat[,7]) %>%
@@ -142,7 +142,7 @@ example2_plot <- cbind(observed = afpca.output$Y[,7], reconstructed = afpca.outp
                       theme_bw() + 
                       ylab("value") + xlab("domain") +  
                       scale_color_manual(values = c("red","black"), 
-                                         name = "Type") + ylim(-.3, 1)
+                                         name = "Type") + ylim(-.6, 1)
 
 
 example1_plot + example2_plot + plot_layout(guides = 'collect')  &
