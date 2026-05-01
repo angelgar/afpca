@@ -7,7 +7,7 @@ Authors@R:
       person("Jeff", "Goldsmith", role = "aut", email = "jeff.goldsmith@columbia.edu"),
       person("Britton", "Sauerbrei", role = "aut", email = "bxs561@case.edu")
     )
-Description: An implementation of adaptively smootheded functional principal component analysis.
+Description: An implementation of adaptively smoothed functional principal component analysis.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
