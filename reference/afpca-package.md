@@ -1,7 +1,7 @@
 # afpca: Adaptive Functional Principal Component Analysis
 
-An implementation of adaptively smootheded functional principal
-component analysis.
+An implementation of adaptively smoothed functional principal component
+analysis.
 
 ## See also
 
