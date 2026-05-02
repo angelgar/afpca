@@ -31,9 +31,9 @@ This vignette reproduces the real-data analysis from the paper "Functional Princ
 ```{r setup}
 library(afpca)
 library(refund)
-library(tidyverse)
-library(tidyfun)
-library(patchwork)
+require(tidyverse)
+require(tidyfun)
+require(patchwork)
 
 data(firing_rates_data)
 ```
