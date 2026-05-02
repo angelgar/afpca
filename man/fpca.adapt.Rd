@@ -16,7 +16,8 @@ fpca.adapt(
   normalize.scores = TRUE,
   orthogonalize_scores = TRUE,
   orthogonalize_fpcs = TRUE,
-  ntimes = 100
+  ntimes = 200,
+  convergence.thresh = 1e-04
 )
 }
 \arguments{

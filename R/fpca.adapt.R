@@ -61,7 +61,8 @@ fpca.adapt <- function(data, col_name = "name", basis = "trunc.poly", poly.degre
                            n.comp = 18, pve = 0.99,
                            normalize.scores = TRUE, orthogonalize_scores = TRUE,
                            orthogonalize_fpcs = TRUE,
-                           ntimes = 100) {
+                           ntimes = 200,
+                           convergence.thresh = 0.0001) {
 
 
   ## Check that these's no issues with the flags
@@ -207,10 +208,14 @@ fpca.adapt <- function(data, col_name = "name", basis = "trunc.poly", poly.degre
     (loglik - loglik_old)/ abs(loglik_old)
 
     convergence <- FALSE
-    if (((loglik - loglik_old)/ abs(loglik_old)) < 0.0001 & times > 4) {
+    if (((loglik - loglik_old)/ abs(loglik_old)) < convergence.thresh & times > 4) {
       convergence <- TRUE
       break
     }
+  }
+
+  if (!convergence) {
+    warning("fpca.adapt did not converge within ", ntimes, " iterations. Consider increasing ntimes")
   }
 
   est_fpc <- get_fpcs(Theta, coef,
