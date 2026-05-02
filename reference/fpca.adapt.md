@@ -80,6 +80,10 @@ fpca.adapt(
 
   Maximum number of iterations
 
+- convergence.thresh:
+
+  Threshold for convergence of penalized likelihood
+
 ## Value
 
 The function returns an object of class "afpca" that contains the

@@ -97,3 +97,8 @@ arXiv:2310.01760.
 - [`simulate_adaptive_functional_data()`](simulate_adaptive_functional_data.md)
   : Simulate Adaptive Functional Data
 
+# Articles
+
+### All vignettes
+
+- [Real Data Analysis Reproducibility](reproducibility_real_data.md):
