@@ -4,8 +4,8 @@ Version: 0.0.0.9
 Authors@R: 
     c(person("Angel", "Garcia de la Garza", , "ag3914@columbia.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6062-5190")),
-      person("Jeff", "Goldsmith", role = "aut", email = "jeff.goldsmith@columbia.edu"),
-      person("Britton", "Sauerbrei", role = "aut", email = "bxs561@case.edu")
+      person("Britton", "Sauerbrei", role = "aut", email = "bxs561@case.edu"),
+      person("Jeff", "Goldsmith", role = "aut", email = "jeff.goldsmith@columbia.edu")
     )
 Description: An implementation of adaptively smoothed functional principal component analysis.
 License: MIT + file LICENSE
