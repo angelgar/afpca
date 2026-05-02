@@ -86,7 +86,7 @@ Fit.Adaptive.FPCA$fpcs   <- Fit.Adaptive.FPCA$fpcs   * -1
 Fit.Adaptive.FPCA$scores <- Fit.Adaptive.FPCA$scores * -1
 
 # Standard FPCA
-Fit.sc <- fpca.sc(Y = Y.data, nbasis = 5)
+Fit.sc <- fpca.sc(Y = Y.data, nbasis = 40)
 Fit.sc$efunctions <- Fit.sc$efunctions * -1
 Fit.sc$scores     <- Fit.sc$scores     * -1
 ```
@@ -173,10 +173,3 @@ figure4_panelB <- neurons_data |>
 figure4_panelB
 ```
 
-### Combined Figure 4
-
-```{r figure4, fig.width = 14, fig.height = 6}
-figure4_panelA + figure4_panelB +
-  plot_layout(widths = c(2, 4)) &
-  theme(text = element_text(size = 11))
-```
