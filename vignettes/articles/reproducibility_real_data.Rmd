@@ -2,7 +2,7 @@
 title: "Real Data Analysis Reproducibility"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Reproducibility}
+  %\VignetteIndexEntry{Real Data Analysis Reproducibility}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
@@ -45,9 +45,9 @@ data(firing_rates_data)
 `firing_rates_data` contains trial-averaged mean activation profiles (spikes/sec) for 25 neurons over a 1.74-second window. Each row is one neuron, and the `activation` column stores its firing rate profile as a `tfd` functional data object. The time axis is shifted so that $t = 0$ corresponds to cue onset. These are the neuron-level averages displayed in Panel B1 of Figure 1 in the paper.
 
 ```{r data-plot, fig.width = 8, fig.height = 4}
-firing_rates_data %>%
-  tf_unnest(activation) %>%
-  mutate(activation_arg = activation_arg - 0.25) %>%
+firing_rates_data |>
+  tf_unnest(activation) |>
+  mutate(activation_arg = activation_arg - 0.25) |>
   ggplot(aes(x = activation_arg, y = activation_value, group = neuron_no)) +
   geom_line(linewidth = 0.6, alpha = 0.5) +
   labs(x = "Time from cue (sec)", y = "Mean Activation (spikes / sec)") +
@@ -74,9 +74,9 @@ fit both models, and flip FPC signs so the dominant pattern reflects increased
 post-cue activation.
 
 ```{r fit-models, cache = TRUE}
-Y.data <- firing_rates_data %>%
-  tf_spread(activation) %>%
-  select(-neuron_no) %>%
+Y.data <- firing_rates_data |>
+  tf_spread(activation) |>
+  select(-neuron_no) |>
   as.matrix()
 
 # Adaptive FPCA
@@ -120,7 +120,7 @@ fpcs_data <- bind_rows(
               Fit.sc$scores[, 2], "Activation Pattern 2", "fpca.sc")
 )
 
-figure4_panelA <- fpcs_data %>%
+figure4_panelA <- fpcs_data |>
   ggplot(aes(x = time)) +
   geom_line(aes(y = Mu),    colour = "black") +
   geom_line(aes(y = plus),  colour = "blue") +
@@ -157,9 +157,9 @@ neurons_data <- bind_rows(
       "Adaptive FPCA", list(t(Y.data)), list(Fit.Adaptive.FPCA$Y_hat)),
   Map(make_neuron_df, neuron_idx, neuron_labels,
       "fpca.sc",       list(t(Y.data)), list(t(Fit.sc$Yhat)))
-) %>% bind_rows()
+) |> bind_rows()
 
-figure4_panelB <- neurons_data %>%
+figure4_panelB <- neurons_data |>
   ggplot(aes(x = time)) +
   geom_line(aes(y = observed, colour = "Observed"),      alpha = 0.3) +
   geom_line(aes(y = fitted,   colour = "Reconstructed")) +
