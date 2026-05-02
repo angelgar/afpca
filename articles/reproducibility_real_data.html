@@ -146,7 +146,7 @@ reflects increased post-cue activation.</p>
 <span><span class="va">Fit.Adaptive.FPCA</span><span class="op">$</span><span class="va">scores</span> <span class="op">&lt;-</span> <span class="va">Fit.Adaptive.FPCA</span><span class="op">$</span><span class="va">scores</span> <span class="op">*</span> <span class="op">-</span><span class="fl">1</span></span>
 <span></span>
 <span><span class="co"># Standard FPCA</span></span>
-<span><span class="va">Fit.sc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/refund/man/fpca.sc.html" class="external-link">fpca.sc</a></span><span class="op">(</span>Y <span class="op">=</span> <span class="va">Y.data</span>, nbasis <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">Fit.sc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/refund/man/fpca.sc.html" class="external-link">fpca.sc</a></span><span class="op">(</span>Y <span class="op">=</span> <span class="va">Y.data</span>, nbasis <span class="op">=</span> <span class="fl">40</span><span class="op">)</span></span>
 <span><span class="va">Fit.sc</span><span class="op">$</span><span class="va">efunctions</span> <span class="op">&lt;-</span> <span class="va">Fit.sc</span><span class="op">$</span><span class="va">efunctions</span> <span class="op">*</span> <span class="op">-</span><span class="fl">1</span></span>
 <span><span class="va">Fit.sc</span><span class="op">$</span><span class="va">scores</span>     <span class="op">&lt;-</span> <span class="va">Fit.sc</span><span class="op">$</span><span class="va">scores</span>     <span class="op">*</span> <span class="op">-</span><span class="fl">1</span></span></code></pre></div>
 </div>
@@ -232,15 +232,6 @@ representative neurons under each model.</p>
 <span></span>
 <span><span class="va">figure4_panelB</span></span></code></pre></div>
 <p><img src="reproducibility_real_data_files/figure-html/panel-B-1.png" class="r-plt" alt="" width="100%" style="display: block; margin: auto;"></p>
-</div>
-<div class="section level3">
-<h3 id="combined-figure-4">Combined Figure 4<a class="anchor" aria-label="anchor" href="#combined-figure-4"></a>
-</h3>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">figure4_panelA</span> <span class="op">+</span> <span class="va">figure4_panelB</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://patchwork.data-imaginist.com/reference/plot_layout.html" class="external-link">plot_layout</a></span><span class="op">(</span>widths <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span> <span class="op">&amp;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">11</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reproducibility_real_data_files/figure-html/figure4-1.png" class="r-plt" alt="" width="100%" style="display: block; margin: auto;"></p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

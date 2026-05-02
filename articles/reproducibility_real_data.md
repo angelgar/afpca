@@ -81,7 +81,7 @@ Fit.Adaptive.FPCA$fpcs   <- Fit.Adaptive.FPCA$fpcs   * -1
 Fit.Adaptive.FPCA$scores <- Fit.Adaptive.FPCA$scores * -1
 
 # Standard FPCA
-Fit.sc <- fpca.sc(Y = Y.data, nbasis = 5)
+Fit.sc <- fpca.sc(Y = Y.data, nbasis = 40)
 Fit.sc$efunctions <- Fit.sc$efunctions * -1
 Fit.sc$scores     <- Fit.sc$scores     * -1
 ```
@@ -174,14 +174,3 @@ figure4_panelB
 ```
 
 ![](reproducibility_real_data_files/figure-html/panel-B-1.png)
-
-### Combined Figure 4
-
-``` r
-
-figure4_panelA + figure4_panelB +
-  plot_layout(widths = c(2, 4)) &
-  theme(text = element_text(size = 11))
-```
-
-![](reproducibility_real_data_files/figure-html/figure4-1.png)
