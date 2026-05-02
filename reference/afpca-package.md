@@ -18,6 +18,6 @@ Useful links:
 
 Authors:
 
-- Jeff Goldsmith <jeff.goldsmith@columbia.edu>
-
 - Britton Sauerbrei <bxs561@case.edu>
+
+- Jeff Goldsmith <jeff.goldsmith@columbia.edu>
