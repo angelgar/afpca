@@ -31,7 +31,9 @@ Suggests:
     rmarkdown,
     spelling,
     testthat (>= 3.0.0),
-    tidyfun
+    tidyfun,
+    tidyverse,
+    patchwork
 Remotes:
     tidyfun/tidyfun
 URL: https://github.com/angelgar/afpca

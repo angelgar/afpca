@@ -32,6 +32,7 @@ This vignette reproduces the real-data analysis from the paper "Functional Princ
 library(afpca)
 library(refund)
 require(tidyverse)
+require(ggplot2)
 require(tidyfun)
 require(patchwork)
 
