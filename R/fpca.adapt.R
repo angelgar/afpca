@@ -15,6 +15,7 @@
 #' @param orthogonalize_scores orthogonalize scores at each iteration (default is true, recommended)
 #' @param orthogonalize_fpcs orthogonalize FPCs at each iteration (default is true, recommended)
 #' @param ntimes Maximum number of iterations
+#' @param convergence.thresh Threshold for convergence of penalized likelihood
 #'
 #' @importFrom magrittr %>%
 #' @importFrom foreach foreach %do%

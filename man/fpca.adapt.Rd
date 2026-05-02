@@ -44,6 +44,8 @@ fpca.adapt(
 \item{orthogonalize_fpcs}{orthogonalize FPCs at each iteration (default is true, recommended)}
 
 \item{ntimes}{Maximum number of iterations}
+
+\item{convergence.thresh}{Threshold for convergence of penalized likelihood}
 }
 \value{
 The function returns an object of class "afpca" that contains the following:

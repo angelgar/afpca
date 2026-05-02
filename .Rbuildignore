@@ -10,3 +10,6 @@
 ^\.positai$
 ^\.claude$
 ^codecov\.yml$
+^doc$
+^Meta$
+^vignettes/articles$
