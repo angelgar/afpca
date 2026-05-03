@@ -93,8 +93,8 @@ the package’s documentation site:
 - [Reproducibility Vignette – Real Data
   Analysis](http://angelgarciadelagarza.com/afpca/articles/reproducibility_real_data.md)
 
-- \[Reproducibility Vignette –
-  Simulations\]([http://angelgarciadelagarza.com/afpca/articles/reproducibility_simulations.html](http://angelgarciadelagarza.com/afpca/articles/reproducibility_simulations.md)
+- [Reproducibility Vignette –
+  Simulations](http://angelgarciadelagarza.com/afpca/articles/reproducibility_simulations.md)
 
 ## Citation
 
