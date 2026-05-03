@@ -2,5 +2,5 @@
 
 ### All vignettes
 
-- [Real Data Analysis Reproducibility](reproducibility_real_data.md):
-- [Simulations Reproducibility](reproducibility_simulations.md):
+- [Reproducibility - Real Data Analysis](reproducibility_real_data.md):
+- [Reproducibility - Simulations](reproducibility_simulations.md):

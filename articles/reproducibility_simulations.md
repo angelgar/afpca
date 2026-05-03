@@ -1,8 +1,8 @@
-# Simulations Reproducibility
+# Reproducibility - Simulations
 
 ------------------------------------------------------------------------
 
-title: “Simulations Reproducibility” output: rmarkdown::html_vignette
+title: “Reproducibility - Simulations” output: rmarkdown::html_vignette
 vignette: \> % % % editor_options: chunk_output_type: console
 
 ------------------------------------------------------------------------
