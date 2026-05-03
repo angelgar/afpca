@@ -1,8 +1,8 @@
 ---
-title: "Real Data Analysis Reproducibility"
+title: "Reproducibility - Real Data Analysis"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Real Data Analysis Reproducibility}
+  %\VignetteIndexEntry{Reproducibility - Real Data Analysis}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 

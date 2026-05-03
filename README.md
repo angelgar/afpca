@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/angelgar/afpca/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/angelgar/afpca/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 Adaptive Functional Principal Component Analysis
@@ -86,8 +87,24 @@ respective reconstructions.
 
 <img src="man/figures/README-reconstructed_plots-1.png" alt="" style="display: block; margin: auto;" />
 
+## Reproducibility
+
+This package includes vignette articles that reproduce all figures and
+analyses from the accompanying paper. These vignettes are intended to
+ensure full reproducibility of the results presented in the manuscript.
+
+The vignette source files are available locally within the package
+directory at `./vignettes/articles/`. They can also be viewed online via
+the package’s documentation site:
+
+- [Reproducibility Vignette – Real Data
+  Analysis](http://angelgarciadelagarza.com/afpca/articles/reproducibility_real_data.html)
+
+- \[Reproducibility Vignette –
+  Simulations\](<http://angelgarciadelagarza.com/afpca/articles/reproducibility_simulations.html>
+
 ## Citation
 
-Garcia de la Garza, A., Sauerbrei, B., Hantman, A., & Goldsmith, J.
-(2023). Adaptive Functional Principal Component Analysis. arXiv preprint
-arXiv:2310.01760.
+Garcia de la Garza A, Sauerbrei B, Goldsmith J (2026). afpca: Adaptive
+Functional Principal Component Analysis. R package version 0.0.0.9,
+<https://github.com/angelgar/afpca>.

@@ -1,9 +1,9 @@
 ---
 
-title: "Simulations Reproducibility"
+title: "Reproducibility - Simulations"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Simulations Reproducibility}
+  %\VignetteIndexEntry{Reproducibility - Simulations}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 

@@ -19,13 +19,14 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/angelgar/afpca/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/angelgar/afpca/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 Adaptive Functional Principal Component Analysis
 
-* Authors: [Angel Garcia de la Garza](http://angelgarciadelagarza.com), [Britton Sauerbrei](https://sauerbreilab.org/), [Jeff Goldsmith](https://jeffgoldsmith.com/)
-* License: [MIT](https://opensource.org/licenses/MIT). See the [LICENSE](LICENSE) file for details
-* Version: 0.9
+- Authors: [Angel Garcia de la Garza](http://angelgarciadelagarza.com), [Britton Sauerbrei](https://sauerbreilab.org/), [Jeff Goldsmith](https://jeffgoldsmith.com/)
+- License: [MIT](https://opensource.org/licenses/MIT). See the [LICENSE](LICENSE) file for details
+- Version: 0.9
 
 ## What it does
 
@@ -42,13 +43,12 @@ devtools::install_github("angelgar/afpca")
 
 ## How to use it
 
-These are examples of running adaptive FPCA. More details of the use of the package can be found in XYZ. 
+These are examples of running adaptive FPCA. More details of the use of the package can be found in XYZ.
 
 The code below uses a the function `afpca::simulate_adaptive_functional_data()` to simulate 20 curves $Y_i(t)$, $i = 1,\dots,20$ observed over 200 time points on a common grid over domain (0,1) with gaussian noise. These functions are generated from a mean function and two functional principal components with varying temporal smoothness defined as:
 
-* $\mu(t) = t^{-3/2}$ $\sin(\pi \times t^{1/4})I(t>1/2)$ 
-* $\phi_k(t) = t^{-3/2}$ $\sin(4\pi \times k \times t^{1/4})I(t>1/2), k = 1,2$
-
+- $\mu(t) = t^{-3/2}$ $\sin(\pi \times t^{1/4})I(t>1/2)$
+- $\phi_k(t) = t^{-3/2}$ $\sin(4\pi \times k \times t^{1/4})I(t>1/2), k = 1,2$
 
 ```{r}
 
@@ -82,7 +82,7 @@ afpca.output <- fpca.adapt(data = simulated_data)
 
 ```
 
-The plots below show the estimated mean function and functional principal components 
+The plots below show the estimated mean function and functional principal components
 
 ```{r estimated_fpc_plot, echo = FALSE, fig.align='center', fig.height=3, fig.width=9, dpi = 300}
 
@@ -117,8 +117,7 @@ mean_plot + phi_plot + plot_layout(guides = 'collect')   &
 
 ```
 
-
-The plots below shows two examples of observed functions and the respective reconstructions. 
+The plots below shows two examples of observed functions and the respective reconstructions.
 
 ```{r reconstructed_plots, echo = FALSE, fig.align='center', fig.height=3, fig.width=9, dpi = 300}
 
@@ -152,7 +151,16 @@ example1_plot + example2_plot + plot_layout(guides = 'collect')  &
 
 ```
 
+## Reproducibility
+
+This package includes vignette articles that reproduce all figures and analyses from the accompanying paper. These vignettes are intended to ensure full reproducibility of the results presented in the manuscript.
+
+The vignette source files are available locally within the package directory at `./vignettes/articles/`. They can also be viewed online via the package's documentation site:
+
+- [Reproducibility Vignette – Real Data Analysis](http://angelgarciadelagarza.com/afpca/articles/reproducibility_real_data.html)
+
+- [Reproducibility Vignette – Simulations](<http://angelgarciadelagarza.com/afpca/articles/reproducibility_simulations.html>
+
 ## Citation
 
-Garcia de la Garza, A., Sauerbrei, B., Hantman, A., & Goldsmith, J. (2023). Adaptive Functional Principal Component Analysis. arXiv preprint arXiv:2310.01760.
-
+Garcia de la Garza A, Sauerbrei B, Goldsmith J (2026). afpca: Adaptive Functional Principal Component Analysis. R package version 0.0.0.9, <https://github.com/angelgar/afpca>.
