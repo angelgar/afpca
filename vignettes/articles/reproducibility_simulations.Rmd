@@ -1,4 +1,5 @@
 ---
+
 title: "Simulations Reproducibility"
 output: rmarkdown::html_vignette
 vignette: >
@@ -328,6 +329,7 @@ figure2_panelA
 ### Panel B: Observed vs. Fitted for Two Subjects
 
 ```{r fig2-panelB, fig.width = 7, fig.height = 7}
+
 run      <- fig2_runs[[1]]
 subj_idx <- c(1, 2)
 
@@ -366,7 +368,7 @@ figure2_panelB <- panelB_data |>
   geom_line(data = \(d) filter(d, type != "Fitted"),
             aes(group = type), colour = "black", alpha = 0.5) +
   geom_line(data = \(d) filter(d, type == "Fitted"),
-            aes(colour = "blue"), linewidth = 0.8) +
+            colour = "blue", linewidth = 0.8) +
   facet_grid(method ~ subject, scales = "free_y") +
   scale_x_continuous(breaks = c(0, 0.5, 1)) +
   labs(x = "Time", y = "", colour = "Method") +
@@ -374,6 +376,7 @@ figure2_panelB <- panelB_data |>
   theme(text = element_text(size = 11), legend.position = "none")
 
 figure2_panelB
+
 ```
 
 
