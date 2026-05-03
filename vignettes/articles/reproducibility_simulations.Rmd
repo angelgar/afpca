@@ -37,10 +37,7 @@ paper. We compare **Adaptive FPCA** (`fpca.adapt`) against two standard methods
 from the `refund` package — `fpca.sc` and `fpca.face` — across settings that
 vary the number of subjects and the residual noise variance.
 
-The full simulation in the paper used 100 replications per scenario and three
-sample sizes ($I \in \{25, 50, 100\}$); this vignette uses 5 replications
-and three sample sizes to keep runtime manageable. The qualitative conclusions
-remain the same.
+The full simulations in the paper used 100 replications per scenario and three sample sizes $I \in \{25, 50, 100\}$; this vignette uses 10 replications and two sample sizes $I \in \{15, 25\}$ to keep runtime manageable, as the original simulations took around 8+ hours to run using 10 cores and all intermediate output was saved to monitor convergence, resulting in 2GB+ of data. The conclusions remain the same.
 
 > **Note:** To replicate the exact results from the paper, set `n_sim = 100`, 
 > `N.subj = c(25, 50, 100)`, and `nbs = 40`.
