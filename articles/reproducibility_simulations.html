@@ -79,11 +79,15 @@ from the paper. We compare <strong>Adaptive FPCA</strong>
 <code>refund</code> package — <code>fpca.sc</code> and
 <code>fpca.face</code> — across settings that vary the number of
 subjects and the residual noise variance.</p>
-<p>The full simulation in the paper used 100 replications per scenario
+<p>The full simulations in the paper used 100 replications per scenario
 and three sample sizes
-(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>25</mn><mo>,</mo><mn>50</mn><mo>,</mo><mn>100</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">I \in \{25, 50, 100\}</annotation></semantics></math>);
-this vignette uses 5 replications and three sample sizes to keep runtime
-manageable. The qualitative conclusions remain the same.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>25</mn><mo>,</mo><mn>50</mn><mo>,</mo><mn>100</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">I \in \{25, 50, 100\}</annotation></semantics></math>;
+this vignette uses 10 replications and two sample sizes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>15</mn><mo>,</mo><mn>25</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">I \in \{15, 25\}</annotation></semantics></math>
+to keep runtime manageable, as the original simulations took around 8+
+hours to run using 10 cores and all intermediate output was saved to
+monitor convergence, resulting in 2GB+ of data. The conclusions remain
+the same.</p>
 <blockquote>
 <p><strong>Note:</strong> To replicate the exact results from the paper,
 set <code>n_sim = 100</code>, <code>N.subj = c(25, 50, 100)</code>, and
