@@ -1,5 +1,12 @@
 # Simulations Reproducibility
 
+------------------------------------------------------------------------
+
+title: “Simulations Reproducibility” output: rmarkdown::html_vignette
+vignette: \> % % % editor_options: chunk_output_type: console
+
+------------------------------------------------------------------------
+
 ## Overview
 
 This vignette presents a small-scale version of the simulation study
@@ -316,6 +323,7 @@ figure2_panelA
 
 ``` r
 
+
 run      <- fig2_runs[[1]]
 subj_idx <- c(1, 2)
 
@@ -354,7 +362,7 @@ figure2_panelB <- panelB_data |>
   geom_line(data = \(d) filter(d, type != "Fitted"),
             aes(group = type), colour = "black", alpha = 0.5) +
   geom_line(data = \(d) filter(d, type == "Fitted"),
-            aes(colour = "blue"), linewidth = 0.8) +
+            colour = "blue", linewidth = 0.8) +
   facet_grid(method ~ subject, scales = "free_y") +
   scale_x_continuous(breaks = c(0, 0.5, 1)) +
   labs(x = "Time", y = "", colour = "Method") +

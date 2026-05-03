@@ -9,7 +9,7 @@ Adaptive Functional Principal Component Analysis
   [LICENSE](LICENSE) file for details
 - Version: 0.9
 
-## What is does
+## What it does
 
 afpca implements Adaptive Functional Principal Component Analysis
 (aFPCA), a method for estimating directions of variation in functional
